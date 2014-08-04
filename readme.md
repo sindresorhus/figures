@@ -2,6 +2,8 @@
 
 > Unicode symbols with Windows CMD fallbacks
 
+![](screenshot.png)
+
 Windows CMD only supports a [limited character set](http://en.wikipedia.org/wiki/Code_page_437).
 
 
