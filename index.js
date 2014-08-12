@@ -5,6 +5,15 @@ var main = {
 	cross: '✖',
 	star: '★',
 	square: '▇',
+	squareSmall: '◻',
+	squareSmallFilled: '◼',
+	circle: '◯',
+	circleFilled: '◉',
+	circleDotted: '◌',
+	circleDouble: '◎',
+	circleCircle: 'ⓞ',
+	circleCross: 'ⓧ',
+	circlePipe: 'Ⓘ',
 	bullet: '●',
 	dot: '․',
 	ellipsis: '…',
@@ -17,7 +26,13 @@ var main = {
 	arrowUp: '↑',
 	arrowDown: '↓',
 	arrowLeft: '←',
-	arrowRight: '→'
+	arrowRight: '→',
+	radioOn: '◉',
+	radioOff: '◌',
+	checkboxOn: '☒',
+	checkboxOff: '☐',
+	checkboxCircleOn: 'ⓧ',
+	checkboxCircleOff: '◌'
 };
 
 var win = {
@@ -25,6 +40,15 @@ var win = {
 	cross: '×',
 	star: '*',
 	square: '█',
+	squareSmall: '[ ]',
+	squareSmallFilled: '[█]',
+	circle: '( )',
+	circleFilled: '(•)',
+	circleDotted: '( )',
+	circleDouble: '( )',
+	circleCircle: '(○)',
+	circleCross: '(×)',
+	circlePipe: '(│)',
 	bullet: '•',
 	dot: '.',
 	ellipsis: '...',
@@ -37,7 +61,13 @@ var win = {
 	arrowUp: main.arrowUp,
 	arrowDown: main.arrowDown,
 	arrowLeft: main.arrowLeft,
-	arrowRight: main.arrowRight
+	arrowRight: main.arrowRight,
+	radioOn: '(•)',
+	radioOff: '( )',
+	checkboxOn: '[×]',
+	checkboxOff: '[ ]',
+	checkboxCircleOn: '(×)',
+	checkboxCircleOff: '( )'
 };
 
 module.exports = process.platform === 'win32' ? win : main;
