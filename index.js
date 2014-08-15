@@ -1,4 +1,5 @@
 'use strict';
+var platform = process.platform;
 
 var main = {
 	tick: '✔︎',
@@ -14,6 +15,7 @@ var main = {
 	circleCircle: 'ⓞ',
 	circleCross: 'ⓧ',
 	circlePipe: 'Ⓘ',
+	circleQuestionMark: '?⃝',
 	bullet: '●',
 	dot: '․',
 	ellipsis: '…',
@@ -33,7 +35,8 @@ var main = {
 	checkboxOn: '☒',
 	checkboxOff: '☐',
 	checkboxCircleOn: 'ⓧ',
-	checkboxCircleOff: '◌'
+	checkboxCircleOff: '◌',
+	questionMarkPrefix: '?⃝',
 };
 
 var win = {
@@ -50,6 +53,7 @@ var win = {
 	circleCircle: '(○)',
 	circleCross: '(×)',
 	circlePipe: '(│)',
+	circleQuestionMark: '(?)',
 	bullet: '•',
 	dot: '.',
 	ellipsis: '...',
@@ -69,7 +73,13 @@ var win = {
 	checkboxOn: '[×]',
 	checkboxOff: '[ ]',
 	checkboxCircleOn: '(×)',
-	checkboxCircleOff: '( )'
+	checkboxCircleOff: '( )',
+	questionMarkPrefix: '？ '
 };
 
-module.exports = process.platform === 'win32' ? win : main;
+if (platform === 'linux') {
+  // the main one doesn't look that good on Ubuntu
+  main.questionMarkPrefix = '? ';
+}
+
+module.exports = platform === 'win32' ? win : main;
