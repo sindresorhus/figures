@@ -32,11 +32,11 @@ var main = {
 	arrowLeft: '←',
 	arrowRight: '→',
 	radioOn: '◉',
-	radioOff: '◌',
+	radioOff: '◯',
 	checkboxOn: '☒',
 	checkboxOff: '☐',
 	checkboxCircleOn: 'ⓧ',
-	checkboxCircleOff: '◌',
+	checkboxCircleOff: 'Ⓘ',
 	questionMarkPrefix: '?⃝',
 };
 
