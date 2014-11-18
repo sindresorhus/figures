@@ -7,5 +7,5 @@ console.log('  ' + Object.keys(figures).map(function (el) {
 }).join('  ') + '\n');
 
 test('returns a figure', function (t) {
-	t.assert(figures.tick === '✔︎' || figures.tick === '√');
+	t.assert(figures.tick === '✔' || figures.tick === '√');
 });

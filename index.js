@@ -2,7 +2,7 @@
 var platform = process.platform;
 
 var main = {
-	tick: '✔︎',
+	tick: '✔',
 	cross: '✖',
 	star: '★',
 	square: '▇',

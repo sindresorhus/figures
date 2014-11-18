@@ -32,6 +32,6 @@
     "fallback"
   ],
   "devDependencies": {
-    "ava": "0.0.3"
+    "ava": "0.0.4"
   }
 }
