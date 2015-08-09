@@ -1,5 +1,6 @@
 'use strict';
 var platform = process.platform;
+var os = require('os');
 
 var main = {
 	tick: '✔',
@@ -84,4 +85,17 @@ if (platform === 'linux') {
   main.questionMarkPrefix = '?';
 }
 
-module.exports = platform === 'win32' ? win : main;
+var useMainSymbols = false;
+if (platform === 'win32') {
+	var version = os.release().match(/(\d+)/);
+	var major = parseInt(version[1]);
+
+	// Windows 10+
+	if (major >= 10) {
+		useMainSymbols = true;
+	}
+} else {
+	useMainSymbols = true;
+}
+
+module.exports = useMainSymbols ? main : win;
