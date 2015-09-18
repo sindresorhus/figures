@@ -37,7 +37,7 @@ var main = {
 	checkboxOff: '☐',
 	checkboxCircleOn: 'ⓧ',
 	checkboxCircleOff: 'Ⓘ',
-	questionMarkPrefix: '?⃝',
+	questionMarkPrefix: '?⃝'
 };
 
 var win = {
@@ -80,8 +80,8 @@ var win = {
 };
 
 if (platform === 'linux') {
-  // the main one doesn't look that good on Ubuntu
-  main.questionMarkPrefix = '?';
+	// the main one doesn't look that good on Ubuntu
+	main.questionMarkPrefix = '?';
 }
 
 module.exports = platform === 'win32' ? win : main;
