@@ -39,7 +39,8 @@ var main = {
 	checkboxOff: '☐',
 	checkboxCircleOn: 'ⓧ',
 	checkboxCircleOff: 'Ⓘ',
-	questionMarkPrefix: '?⃝'
+	questionMarkPrefix: '?⃝',
+	triangleRight: '▶'
 };
 
 var win = {
@@ -80,7 +81,8 @@ var win = {
 	checkboxOff: '[ ]',
 	checkboxCircleOn: '(×)',
 	checkboxCircleOff: '( )',
-	questionMarkPrefix: '？'
+	questionMarkPrefix: '？',
+	triangleRight: '►'
 };
 
 if (platform === 'linux') {
