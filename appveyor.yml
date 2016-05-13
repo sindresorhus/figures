@@ -1,0 +1,14 @@
+environment:
+  matrix:
+    - nodejs_version: '6'
+    - nodejs_version: '4'
+    - nodejs_version: '0.12'
+    - nodejs_version: '0.10'
+install:
+  - npm install
+shallow_clone: true
+clone_depth: 1
+test_script:
+  - node --version
+  - npm --version
+  - npm run test

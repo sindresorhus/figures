@@ -1,4 +1,5 @@
 'use strict';
+var objectAssign = require('object-assign');
 var platform = process.platform;
 
 var main = {
@@ -124,4 +125,22 @@ if (platform === 'linux') {
 	main.questionMarkPrefix = '?';
 }
 
-module.exports = platform === 'win32' ? win : main;
+var figures = platform === 'win32' ? win : main;
+
+var fn = function (str) {
+	if (figures === main) {
+		return str;
+	}
+
+	Object.keys(main).forEach(function (key) {
+		if (main[key] === figures[key]) {
+			return;
+		}
+
+		str = str.replace(new RegExp(main[key], 'g'), figures[key]);
+	});
+
+	return str;
+};
+
+module.exports = objectAssign(fn, figures);
