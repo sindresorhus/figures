@@ -1,8 +1,8 @@
 import test from 'ava';
-import figures from './';
+import m from './';
 
-console.log('  ' + Object.keys(figures).map(x => figures[x]).join('  ') + '\n');
+console.log('  ' + Object.keys(m).map(x => m[x]).join('  ') + '\n');
 
-test('returns a figure', t => {
-	t.true(figures.tick === '✔' || figures.tick === '√');
+test(t => {
+	t.true(m.tick === '✔' || m.tick === '√');
 });
