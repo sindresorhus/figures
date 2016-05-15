@@ -31,11 +31,11 @@
     "figures",
     "fallback"
   ],
+  "dependencies": {
+    "object-assign": "^4.1.0"
+  },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
-  },
-  "dependencies": {
-    "object-assign": "^4.1.0"
   }
 }

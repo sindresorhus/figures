@@ -23,10 +23,27 @@ See the [source](index.js) for supported symbols.
 ```js
 const figures = require('figures');
 
+console.log(figures('✔︎ check'));
+// On real OSes:  ✔︎ check
+// On Windows:    √ check
+
 console.log(figures.tick);
 // On real OSes:  ✔︎
 // On Windows:    √
 ```
+
+
+## API
+
+### figures(input)
+
+Returns the `input` with replaced fallback unicode symbols.
+
+#### input
+
+Type: `string`
+
+Value where the unicode symbols will be replaced with fallback symbols depending on the OS.
 
 
 ## License
