@@ -13,7 +13,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && ava"
+    "prepublish": "npm run make",
+    "test": "xo && ava",
+    "make": "./makefile.js"
   },
   "files": [
     "index.js"
@@ -37,6 +39,8 @@
   },
   "devDependencies": {
     "ava": "*",
+    "markdown-table": "^0.4.0",
+    "require-uncached": "^1.0.2",
     "xo": "*"
   }
 }
