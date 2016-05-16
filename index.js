@@ -1,5 +1,6 @@
 'use strict';
 var objectAssign = require('object-assign');
+var escapeStringRegexp = require('escape-string-regexp');
 var platform = process.platform;
 
 var main = {
@@ -137,7 +138,7 @@ var fn = function (str) {
 			return;
 		}
 
-		str = str.replace(new RegExp(main[key], 'g'), figures[key]);
+		str = str.replace(new RegExp(escapeStringRegexp(main[key]), 'g'), figures[key]);
 	});
 
 	return str;
