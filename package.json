@@ -13,7 +13,6 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "prepublish": "npm run make",
     "test": "xo && ava",
     "make": "./makefile.js"
   },
