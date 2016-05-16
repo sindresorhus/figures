@@ -37,13 +37,13 @@ console.log(figures.tick);
 
 ### figures(input)
 
-Returns the `input` with replaced fallback unicode symbols.
+Returns the input with replaced fallback unicode symbols on Windows.
 
 #### input
 
 Type: `string`
 
-Value where the unicode symbols will be replaced with fallback symbols depending on the OS.
+String where the unicode symbols will be replaced with fallback symbols depending on the OS.
 
 
 ## License
