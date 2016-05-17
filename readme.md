@@ -39,6 +39,8 @@ console.log(figures.tick);
 
 Returns the input with replaced fallback unicode symbols on Windows.
 
+All the below [figures](#figures) are attached to the main export as shown in the example above.
+
 #### input
 
 Type: `string`
