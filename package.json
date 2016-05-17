@@ -31,6 +31,10 @@
     "figures",
     "fallback"
   ],
+  "dependencies": {
+    "escape-string-regexp": "^1.0.5",
+    "object-assign": "^4.1.0"
+  },
   "devDependencies": {
     "ava": "*",
     "xo": "*"
