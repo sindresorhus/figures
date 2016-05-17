@@ -10,5 +10,9 @@ test('figures', t => {
 });
 
 test('fallbacks', t => {
+	t.is(m('foo'), 'foo');
+	t.is(m('?bar?'), '?bar?');
+	t.is(m('✔ ✔ ✔'), result('✔ ✔ ✔', '√ √ √'));
+	t.is(m('✔ ✖\n★ ▇'), result('✔ ✖\n★ ▇', '√ ×\n* █'));
 	t.is(m('✔ ✖ ★ ▇'), result('✔ ✖ ★ ▇', '√ × * █'));
 });
