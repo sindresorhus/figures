@@ -1,6 +1,7 @@
 'use strict';
 var objectAssign = require('object-assign');
 var escapeStringRegexp = require('escape-string-regexp');
+
 var platform = process.platform;
 
 var main = {
