@@ -1,9 +1,9 @@
 'use strict';
-var escapeStringRegexp = require('escape-string-regexp');
+const escapeStringRegexp = require('escape-string-regexp');
 
-var platform = process.platform;
+const platform = process.platform;
 
-var main = {
+const main = {
 	tick: '✔',
 	cross: '✖',
 	star: '★',
@@ -62,7 +62,7 @@ var main = {
 	sevenEighths: '⅞'
 };
 
-var win = {
+const win = {
 	tick: '√',
 	cross: '×',
 	star: '*',
@@ -126,14 +126,14 @@ if (platform === 'linux') {
 	main.questionMarkPrefix = '?';
 }
 
-var figures = platform === 'win32' ? win : main;
+const figures = platform === 'win32' ? win : main;
 
-var fn = function (str) {
+const fn = str => {
 	if (figures === main) {
 		return str;
 	}
 
-	Object.keys(main).forEach(function (key) {
+	Object.keys(main).forEach(key => {
 		if (main[key] === figures[key]) {
 			return;
 		}
