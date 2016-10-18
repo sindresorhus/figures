@@ -1,5 +1,4 @@
 'use strict';
-var objectAssign = require('object-assign');
 var escapeStringRegexp = require('escape-string-regexp');
 
 var platform = process.platform;
@@ -145,4 +144,4 @@ var fn = function (str) {
 	return str;
 };
 
-module.exports = objectAssign(fn, figures);
+module.exports = Object.assign(fn, figures);
