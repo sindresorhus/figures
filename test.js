@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 const result = (main, win) => process.platform === 'win32' ? win : main;
 

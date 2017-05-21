@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 'use strict';
 const fs = require('fs');
-const requireUncached = require('require-uncached');
+const importFresh = require('import-fresh');
 const table = require('markdown-table');
 
 const load = value => {
 	Object.defineProperty(process, 'platform', {value});
-	return requireUncached('./');
+	return importFresh('.');
 };
 
 const darwin = load('darwin');

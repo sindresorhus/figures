@@ -37,11 +37,8 @@
   },
   "devDependencies": {
     "ava": "*",
+    "import-fresh": "^2.0.0",
     "markdown-table": "^1.0.0",
-    "require-uncached": "^1.0.2",
     "xo": "*"
-  },
-  "xo": {
-    "esnext": true
   }
 }
