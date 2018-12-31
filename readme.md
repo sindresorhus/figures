@@ -1,4 +1,4 @@
-# figures [![Build Status: Linux](https://travis-ci.org/sindresorhus/figures.svg?branch=master)](https://travis-ci.org/sindresorhus/figures) [![Build status: Windows](https://ci.appveyor.com/api/projects/status/mb743hl70269be3r/branch/master?svg=true)](https://ci.appveyor.com/project/sindresorhus/figures/branch/master)
+# figures [![Build Status](https://travis-ci.org/sindresorhus/figures.svg?branch=master)](https://travis-ci.org/sindresorhus/figures)
 
 > Unicode symbols with Windows CMD fallbacks
 
