@@ -1,44 +1,44 @@
 {
-  "name": "figures",
-  "version": "2.0.0",
-  "description": "Unicode symbols with Windows CMD fallbacks",
-  "license": "MIT",
-  "repository": "sindresorhus/figures",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=6"
-  },
-  "scripts": {
-    "test": "xo && ava",
-    "make": "./makefile.js"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "unicode",
-    "cli",
-    "cmd",
-    "command-line",
-    "characters",
-    "char",
-    "symbol",
-    "symbols",
-    "figure",
-    "figures",
-    "fallback"
-  ],
-  "dependencies": {
-    "escape-string-regexp": "^1.0.5"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "import-fresh": "^2.0.0",
-    "markdown-table": "^1.0.0",
-    "xo": "*"
-  }
+	"name": "figures",
+	"version": "2.0.0",
+	"description": "Unicode symbols with Windows CMD fallbacks",
+	"license": "MIT",
+	"repository": "sindresorhus/figures",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && ava",
+		"make": "./makefile.js"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"unicode",
+		"cli",
+		"cmd",
+		"command-line",
+		"characters",
+		"char",
+		"symbol",
+		"symbols",
+		"figure",
+		"figures",
+		"fallback"
+	],
+	"dependencies": {
+		"escape-string-regexp": "^1.0.5"
+	},
+	"devDependencies": {
+		"ava": "^1.0.1",
+		"import-fresh": "^3.0.0",
+		"markdown-table": "^1.0.0",
+		"xo": "^0.23.0"
+	}
 }

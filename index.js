@@ -128,20 +128,21 @@ if (platform === 'linux') {
 
 const figures = platform === 'win32' ? win : main;
 
-const fn = str => {
+const fn = string => {
 	if (figures === main) {
-		return str;
+		return string;
 	}
 
-	Object.keys(main).forEach(key => {
+	// TODO: Use `Object.entries` when targeting Node.js 8
+	for (const key of Object.keys(main)) {
 		if (main[key] === figures[key]) {
-			return;
+			continue;
 		}
 
-		str = str.replace(new RegExp(escapeStringRegexp(main[key]), 'g'), figures[key]);
-	});
+		string = string.replace(new RegExp(escapeStringRegexp(main[key]), 'g'), figures[key]);
+	}
 
-	return str;
+	return string;
 };
 
 module.exports = Object.assign(fn, figures);

@@ -12,7 +12,7 @@ Windows CMD only supports a [limited character set](http://en.wikipedia.org/wiki
 ## Install
 
 ```
-$ npm install --save figures
+$ npm install figures
 ```
 
 
@@ -37,7 +37,7 @@ console.log(figures.tick);
 
 ### figures(input)
 
-Returns the input with replaced fallback unicode symbols on Windows.
+Returns the input with replaced fallback Unicode symbols on Windows.
 
 All the below [figures](#figures) are attached to the main export as shown in the example above.
 

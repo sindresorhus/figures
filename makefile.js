@@ -13,14 +13,25 @@ const darwin = load('darwin');
 const win32 = load('win32');
 
 const jsonTable = [
-	['Name', 'Real OSes', 'Windows']
+	[
+		'Name',
+		'Real OSes',
+		'Windows'
+	]
 ];
 
-Object.keys(darwin).forEach(key => {
+// TODO: Use `Object.entries` when targeting Node.js 8
+for (const key of Object.keys(darwin)) {
 	jsonTable.push([key, darwin[key], win32[key]]);
-});
+}
 
-const figureTable = table(jsonTable, {align: ['', 'c', 'c']});
+const figureTable = table(jsonTable, {
+	align: [
+		'',
+		'c',
+		'c'
+	]
+});
 
 let readme = fs.readFileSync('readme.md', 'utf8');
 readme = readme.replace(/## Figures[^#]*/gm, `## Figures\n\n${figureTable}\n\n\n`);
