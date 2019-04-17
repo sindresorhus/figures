@@ -62,7 +62,7 @@ const main = {
 	sevenEighths: '⅞'
 };
 
-const win = {
+const windows = {
 	tick: '√',
 	cross: '×',
 	star: '*',
@@ -126,20 +126,19 @@ if (platform === 'linux') {
 	main.questionMarkPrefix = '?';
 }
 
-const figures = platform === 'win32' ? win : main;
+const figures = platform === 'win32' ? windows : main;
 
 const fn = string => {
 	if (figures === main) {
 		return string;
 	}
 
-	// TODO: Use `Object.entries` when targeting Node.js 8
-	for (const key of Object.keys(main)) {
-		if (main[key] === figures[key]) {
+	for (const [key, value] of Object.entries(main)) {
+		if (value === figures[key]) {
 			continue;
 		}
 
-		string = string.replace(new RegExp(escapeStringRegexp(main[key]), 'g'), figures[key]);
+		string = string.replace(new RegExp(escapeStringRegexp(value), 'g'), figures[key]);
 	}
 
 	return string;
