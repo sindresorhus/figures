@@ -35,13 +35,13 @@ console.log(figures.tick);
 
 ## API
 
-### figures(input)
+### figures(string)
 
 Returns the input with replaced fallback Unicode symbols on Windows.
 
 All the below [figures](#figures) are attached to the main export as shown in the example above.
 
-#### input
+#### string
 
 Type: `string`
 

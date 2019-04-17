@@ -13,11 +13,12 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "xo && ava",
+		"test": "xo && ava && tsd",
 		"make": "./makefile.js"
 	},
 	"files": [
-		"index.js"
+		"index.js",
+		"index.d.ts"
 	],
 	"keywords": [
 		"unicode",
@@ -36,9 +37,10 @@
 		"escape-string-regexp": "^1.0.5"
 	},
 	"devDependencies": {
-		"ava": "^1.0.1",
+		"ava": "^1.4.1",
 		"import-fresh": "^3.0.0",
-		"markdown-table": "^1.0.0",
-		"xo": "^0.23.0"
+		"markdown-table": "^1.1.2",
+		"tsd": "^0.7.2",
+		"xo": "^0.24.0"
 	}
 }
