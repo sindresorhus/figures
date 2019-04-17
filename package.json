@@ -1,6 +1,6 @@
 {
 	"name": "figures",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Unicode symbols with Windows CMD fallbacks",
 	"license": "MIT",
 	"repository": "sindresorhus/figures",
