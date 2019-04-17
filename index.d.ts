@@ -2,7 +2,7 @@ declare const figures: {
 	/**
 	Replace unicode symbols depending on the OS.
 
-	@param string - String where the unicode symbols will be replaced with fallback symbols depending on the OS.
+	@param string - String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
 	@returns The input with replaced fallback Unicode symbols on Windows.
 
 	@example

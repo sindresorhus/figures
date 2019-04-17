@@ -45,7 +45,7 @@ All the below [figures](#figures) are attached to the main export as shown in th
 
 Type: `string`
 
-String where the unicode symbols will be replaced with fallback symbols depending on the OS.
+String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
 
 
 ## Figures
