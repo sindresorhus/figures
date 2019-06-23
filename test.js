@@ -1,7 +1,7 @@
 import test from 'ava';
 import figures from '.';
 
-const result = (main, windows) => process.platform === 'win32' ? windows : main;
+const result = (main, windows) => process.platform === 'win32' ? process.env.WT_SESSION ? main : windows : main;
 
 console.log('  ' + Object.keys(figures).map(symbol => figures[symbol]).join('  ') + '\n');
 

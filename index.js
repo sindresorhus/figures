@@ -126,7 +126,13 @@ if (platform === 'linux') {
 	main.questionMarkPrefix = '?';
 }
 
-const figures = platform === 'win32' ? windows : main;
+const figures = platform === 'win32' ? process.env.WT_SESSION ? main : windows : main;
+
+if (platform === 'win32' && process.env.WT_SESSION) {
+	// The main ones doesn't look that good on Ubuntu
+	main.questionMarkPrefix = '?';
+	main.circleQuestionMark = '(?)';
+}
 
 const fn = string => {
 	if (figures === main) {

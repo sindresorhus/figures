@@ -7,6 +7,7 @@
 [*and more...*](index.js)
 
 Windows CMD only supports a [limited character set](http://en.wikipedia.org/wiki/Code_page_437).
+The new Windows terminal fully supports Unicode symbols.
 
 
 ## Install
