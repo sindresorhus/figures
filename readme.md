@@ -79,6 +79,7 @@ String where the Unicode symbols will be replaced with fallback symbols dependin
 | smiley             |     ㋡     |    ☺    |
 | mustache           |     ෴     |   ┌─┐   |
 | heart              |     ♥     |    ♥    |
+| nodejs             |     ⬢     |    ♦    |
 | arrowUp            |     ↑     |    ↑    |
 | arrowDown          |     ↓     |    ↓    |
 | arrowLeft          |     ←     |    ←    |

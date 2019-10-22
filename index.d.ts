@@ -47,6 +47,7 @@ declare const figures: {
 	readonly smiley: string;
 	readonly mustache: string;
 	readonly heart: string;
+	readonly nodejs: string;
 	readonly arrowUp: string;
 	readonly arrowDown: string;
 	readonly arrowLeft: string;
