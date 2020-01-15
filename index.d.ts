@@ -1,3 +1,7 @@
+declare interface FigureSet {
+	[name: string]: string;
+}
+
 declare const figures: {
 	/**
 	Replace unicode symbols depending on the OS.
@@ -19,6 +23,8 @@ declare const figures: {
 	```
 	*/
 	(string: string): string;
+	readonly main: FigureSet;
+	readonly windows: FigureSet;
 
 	readonly tick: string;
 	readonly cross: string;

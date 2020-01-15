@@ -147,3 +147,5 @@ const fn = string => {
 };
 
 module.exports = Object.assign(fn, figures);
+module.exports.main = main;
+module.exports.windows = windows;
