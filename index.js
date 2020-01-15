@@ -1,7 +1,7 @@
 'use strict';
 const escapeStringRegexp = require('escape-string-regexp');
 
-const { platform, env } = process;
+const {platform, env} = process;
 
 const main = {
 	tick: '✔',
