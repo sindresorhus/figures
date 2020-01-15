@@ -14,14 +14,14 @@ const win32 = load('win32');
 
 const data = Object.entries(darwin).map(([name, figure]) => [name, figure, win32[name]]);
 
-// TODO: Use spread syntax when targeting Node 8.3
 const jsonTable = [
 	[
 		'Name',
 		'Real OSes',
 		'Windows'
-	]
-].concat(data);
+	],
+	...data
+]
 
 const figureTable = table(jsonTable, {
 	align: [
