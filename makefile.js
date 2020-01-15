@@ -12,18 +12,16 @@ const load = value => {
 const darwin = load('darwin');
 const win32 = load('win32');
 
+const data = Object.entries(darwin).map(([name, figure]) => [name, figure, win32[name]]);
+
+// TODO: Use spread syntax when targeting Node 8.3
 const jsonTable = [
 	[
 		'Name',
 		'Real OSes',
 		'Windows'
 	]
-];
-
-// TODO: Use `Object.entries` when targeting Node.js 8
-for (const key of Object.keys(darwin)) {
-	jsonTable.push([key, darwin[key], win32[key]]);
-}
+].concat(data);
 
 const figureTable = table(jsonTable, {
 	align: [
@@ -34,6 +32,7 @@ const figureTable = table(jsonTable, {
 });
 
 let readme = fs.readFileSync('readme.md', 'utf8');
+
 readme = readme.replace(/## Figures[^#]*/gm, `## Figures\n\n${figureTable}\n\n\n`);
 
 fs.writeFileSync('readme.md', readme);
