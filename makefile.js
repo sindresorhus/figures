@@ -32,7 +32,6 @@ const figureTable = table(jsonTable, {
 });
 
 let readme = fs.readFileSync('readme.md', 'utf8');
-
 readme = readme.replace(/## Figures[^#]*/gm, `## Figures\n\n${figureTable}\n\n\n`);
 
 fs.writeFileSync('readme.md', readme);
