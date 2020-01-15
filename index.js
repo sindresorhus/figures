@@ -1,7 +1,7 @@
 'use strict';
 const escapeStringRegexp = require('escape-string-regexp');
 
-const {platform, env} = process;
+const { platform, env } = process;
 
 const main = {
 	tick: '✔',
@@ -128,7 +128,7 @@ if (platform === 'linux') {
 	main.questionMarkPrefix = '?';
 }
 
-const figures = platform === 'win32' || !env.WT_SESSION ? windows : main;
+const figures = platform === 'win32' && !env.WT_SESSION ? windows : main;
 
 const fn = string => {
 	if (figures === main) {
