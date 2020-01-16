@@ -21,7 +21,7 @@ const jsonTable = [
 		'Windows'
 	],
 	...data
-]
+];
 
 const figureTable = table(jsonTable, {
 	align: [
