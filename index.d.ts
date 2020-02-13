@@ -81,7 +81,11 @@ declare const figures: {
 	```
 	*/
 	(string: string): string;
+
+	/** Figures to use when not running on Windows. */
 	readonly main: FigureSet;
+
+	/** Figures to use when running on Windows. */
 	readonly windows: FigureSet;
 } & FigureSet;
 

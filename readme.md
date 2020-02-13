@@ -30,6 +30,12 @@ console.log(figures('✔︎ check'));
 console.log(figures.tick);
 // On real OSes:  ✔︎
 // On Windows:    √
+
+console.log(figures.main.tick);
+// On all OSes:  ✔︎
+
+console.log(figures.windows.tick);
+// On all OSes:  √
 ```
 
 
@@ -46,6 +52,16 @@ All the below [figures](#figures) are attached to the main export as shown in th
 Type: `string`
 
 String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
+
+
+### figures.main
+
+Figures to use when not running on Windows.
+
+
+### figures.windows
+
+Figures to use when running on Windows.
 
 
 ## Figures
