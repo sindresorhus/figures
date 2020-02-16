@@ -16,3 +16,8 @@ test('fallbacks', t => {
 	t.is(figures('✔ ✖\n★ ▇'), result('✔ ✖\n★ ▇', '√ ×\n* █'));
 	t.is(figures('✔ ✖ ★ ▇'), result('✔ ✖ ★ ▇', '√ × * █'));
 });
+
+test('exported sets', t => {
+	t.is(figures.main.tick, '✔');
+	t.is(figures.windows.tick, '√');
+});

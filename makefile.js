@@ -1,16 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 const fs = require('fs');
-const importFresh = require('import-fresh');
 const table = require('markdown-table');
-
-const load = value => {
-	Object.defineProperty(process, 'platform', {value});
-	return importFresh('.');
-};
-
-const darwin = load('darwin');
-const win32 = load('win32');
+const {main: darwin, windows: win32} = require('.');
 
 const data = Object.entries(darwin).map(([name, figure]) => [name, figure, win32[name]]);
 
