@@ -9,7 +9,7 @@ const data = Object.entries(darwin).map(([name, figure]) => [name, figure, win32
 const jsonTable = [
 	[
 		'Name',
-		'Real OSes',
+		'Non-Windows',
 		'Windows'
 	],
 	...data

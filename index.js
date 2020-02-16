@@ -124,7 +124,7 @@ const windows = {
 };
 
 if (platform === 'linux') {
-	// The main one doesn't look that good on Ubuntu
+	// The main one doesn't look that good on Ubuntu.
 	main.questionMarkPrefix = '?';
 }
 
