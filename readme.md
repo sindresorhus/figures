@@ -1,4 +1,4 @@
-# figures [![Build Status](https://travis-ci.org/sindresorhus/figures.svg?branch=master)](https://travis-ci.org/sindresorhus/figures)
+# figures
 
 > Unicode symbols with Windows CMD fallbacks
 
