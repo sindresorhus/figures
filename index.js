@@ -63,7 +63,7 @@ const main = {
 	sevenEighths: '⅞'
 };
 
-const windows = {
+const fallback = {
 	tick: '√',
 	cross: '×',
 	star: '*',
@@ -128,7 +128,8 @@ if (platform === 'linux') {
 	main.questionMarkPrefix = '?';
 }
 
-const figures = platform === 'win32' ? windows : main;
+// TODO: Use https://github.com/sindresorhus/is-unicode-supported when targeting Node.js 10.
+const figures = platform === 'win32' ? fallback : main;
 
 const fn = string => {
 	if (figures === main) {
@@ -148,4 +149,4 @@ const fn = string => {
 
 module.exports = Object.assign(fn, figures);
 module.exports.main = main;
-module.exports.windows = windows;
+module.exports.windows = fallback;
