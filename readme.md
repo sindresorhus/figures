@@ -90,6 +90,8 @@ Symbols to use when running on Windows.
 | smiley             |      ㋡      |    ☺    |
 | mustache           |      ෴      |   ┌─┐   |
 | heart              |      ♥      |    ♥    |
+| musicNote          |      ♪      |    ♪    |
+| musicNoteBeamed    |      ♫      |    ♫    |
 | nodejs             |      ⬢      |    ♦    |
 | arrowUp            |      ↑      |    ↑    |
 | arrowDown          |      ↓      |    ↓    |

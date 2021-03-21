@@ -10,6 +10,8 @@ const common = {
 	ellipsis: '…',
 	pointerSmall: '›',
 	heart: '♥',
+	musicNote: '♪',
+	musicNoteBeamed: '♫',
 	arrowUp: '↑',
 	arrowDown: '↓',
 	arrowLeft: '←',
