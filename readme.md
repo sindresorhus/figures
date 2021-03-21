@@ -104,6 +104,16 @@ Symbols to use when running on Windows.
 | checkboxCircleOn   |      ⓧ      |   (×)   |
 | checkboxCircleOff  |      Ⓘ      |   ( )   |
 | questionMarkPrefix |      ?⃝     |    ？    |
+| subscriptZero      |      ₀      |    ₀    |
+| subscriptOne       |      ₁      |    ₁    |
+| subscriptTwo       |      ₂      |    ₂    |
+| subscriptThree     |      ₃      |    ₃    |
+| subscriptFour      |      ₄      |    ₄    |
+| subscriptFive      |      ₅      |    ₅    |
+| subscriptSix       |      ₆      |    ₆    |
+| subscriptSeven     |      ₇      |    ₇    |
+| subscriptEight     |      ₈      |    ₈    |
+| subscriptNine      |      ₉      |    ₉    |
 | oneHalf            |      ½      |    ½    |
 | oneThird           |      ⅓      |    ⅓    |
 | oneQuarter         |      ¼      |    ¼    |
