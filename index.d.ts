@@ -20,6 +20,18 @@ declare const figureSet: {
 	readonly ellipsis: string;
 	readonly pointer: string;
 	readonly pointerSmall: string;
+	readonly triangleUp: string;
+	readonly triangleUpSmall: string;
+	readonly triangleUpOutline: string;
+	readonly triangleDown: string;
+	readonly triangleDownSmall: string;
+	readonly triangleLeft: string;
+	readonly triangleLeftSmall: string;
+	readonly triangleRight: string;
+	readonly triangleRightSmall: string;
+	readonly lozenge: string;
+	readonly lozengeOutline: string;
+	readonly home: string;
 	readonly info: string;
 	readonly warning: string;
 	readonly hamburger: string;
