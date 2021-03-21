@@ -13,8 +13,8 @@ test('fallbacks', t => {
 	t.is(figures('foo'), 'foo');
 	t.is(figures('?bar?'), '?bar?');
 	t.is(figures('✔ ✔ ✔'), result('✔ ✔ ✔', '√ √ √'));
-	t.is(figures('✔ ✖\n★ ▇'), result('✔ ✖\n★ ▇', '√ ×\n✶ █'));
-	t.is(figures('✔ ✖ ★ ▇'), result('✔ ✖ ★ ▇', '√ × ✶ █'));
+	t.is(figures('✔ ✖\n★ ◼'), result('✔ ✖\n★ ◼', '√ ×\n✶ ■'));
+	t.is(figures('✔ ✖ ★ ◼'), result('✔ ✖ ★ ◼', '√ × ✶ ■'));
 });
 
 test('exported sets', t => {
