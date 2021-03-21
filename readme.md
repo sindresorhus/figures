@@ -154,6 +154,10 @@ Symbols to use when running on Windows.
 | sevenEighths       |     `⅞`     |   `⅞`   |
 
 
+## Other characters
+
+If you cannot find the character you're looking for in the table above, please look at this full list of [cross-platform terminal characters](https://github.com/ehmicky/cross-platform-terminal-characters).
+
 ## Related
 
 - [log-symbols](https://github.com/sindresorhus/log-symbols) - Colored symbols for various log levels
