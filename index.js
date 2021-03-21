@@ -5,6 +5,14 @@ const {platform} = process;
 
 const common = {
 	square: '█',
+	squareDarkShade: '▓',
+	squareMediumShade: '▒',
+	squareLightShade: '░',
+	squareTop: '▀',
+	squareBottom: '▄',
+	squareLeft: '▌',
+	squareRight: '▐',
+	squareCenter: '■',
 	bullet: '●',
 	dot: '․',
 	line: '─',

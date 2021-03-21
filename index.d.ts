@@ -5,6 +5,14 @@ declare const figureSet: {
 	readonly square: string;
 	readonly squareSmall: string;
 	readonly squareSmallFilled: string;
+	readonly squareDarkShade: string;
+	readonly squareMediumShade: string;
+	readonly squareLightShade: string;
+	readonly squareTop: string;
+	readonly squareBottom: string;
+	readonly squareLeft: string;
+	readonly squareRight: string;
+	readonly squareCenter: string;
 	readonly play: string;
 	readonly circle: string;
 	readonly circleFilled: string;
