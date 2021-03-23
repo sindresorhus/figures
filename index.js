@@ -82,7 +82,7 @@ const fallback = {
 	circlePipe: '(│)',
 	circleQuestionMark: '(?)',
 	bullet: main.bullet,
-	dot: '.',
+	dot: main.dot,
 	line: main.line,
 	ellipsis: '...',
 	pointer: '>',
