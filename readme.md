@@ -83,7 +83,7 @@ Symbols to use when running on Windows.
 | line               |      ─      |    ─    |
 | ellipsis           |      …      |   ...   |
 | pointer            |      ❯      |    >    |
-| pointerSmall       |      ›      |    »    |
+| pointerSmall       |      ›      |    ›    |
 | info               |      ℹ      |    i    |
 | warning            |      ⚠      |    ‼    |
 | hamburger          |      ☰      |    ≡    |

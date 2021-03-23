@@ -84,7 +84,7 @@ const fallback = {
 	line: '─',
 	ellipsis: '...',
 	pointer: '>',
-	pointerSmall: '»',
+	pointerSmall: main.pointerSmall,
 	info: 'i',
 	warning: '‼',
 	hamburger: '≡',
