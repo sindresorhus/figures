@@ -81,7 +81,7 @@ Symbols to use when running on Windows.
 | bullet             |      ●      |    ●    |
 | dot                |      ․      |    .    |
 | line               |      ─      |    ─    |
-| ellipsis           |      …      |   ...   |
+| ellipsis           |      …      |    …    |
 | pointer            |      ❯      |    >    |
 | pointerSmall       |      ›      |    ›    |
 | info               |      ℹ      |    i    |
