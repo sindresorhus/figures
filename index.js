@@ -66,7 +66,7 @@ const main = {
 const fallback = {
 	tick: '√',
 	cross: '×',
-	star: '*',
+	star: '✶',
 	square: '█',
 	squareSmall: '[ ]',
 	squareSmallFilled: '[█]',
