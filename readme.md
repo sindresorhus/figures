@@ -67,8 +67,8 @@ Symbols to use when running on Windows.
 | cross              |      ✖      |    ×    |
 | star               |      ★      |    ✶    |
 | square             |      ▇      |    █    |
-| squareSmall        |      ◻      |   [ ]   |
-| squareSmallFilled  |      ◼      |   [█]   |
+| squareSmall        |      ◻      |    □    |
+| squareSmallFilled  |      ◼      |    ■    |
 | play               |      ▶      |    ►    |
 | circle             |      ◯      |   ( )   |
 | circleFilled       |      ◉      |   (*)   |
