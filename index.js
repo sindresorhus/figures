@@ -135,22 +135,32 @@ if (platform === 'linux') {
 // TODO: Use https://github.com/sindresorhus/is-unicode-supported when targeting Node.js 10.
 const figures = platform === 'win32' ? fallback : main;
 
-const fn = string => {
+const isFallbackFigure = ([key, mainValue]) => figures[key] !== mainValue;
+const getFigureRegExp = ([key, mainValue]) => [figures[key], new RegExp(escapeStringRegexp(mainValue), 'g')];
+
+let replacements = [];
+const getReplacements = () => {
+	if (replacements.length !== 0) {
+		return replacements;
+	}
+
+	replacements = Object.entries(main)
+		.filter(isFallbackFigure)
+		.map(getFigureRegExp);
+	return replacements;
+};
+
+const replaceCharToFallback = (string, [fallbackValue, mainRegExp]) => string.replace(mainRegExp, fallbackValue);
+
+// On Windows, substitute non-fallback to fallback figures
+const replaceCharsToFallback = string => {
 	if (figures === main) {
 		return string;
 	}
 
-	for (const [key, value] of Object.entries(main)) {
-		if (value === figures[key]) {
-			continue;
-		}
-
-		string = string.replace(new RegExp(escapeStringRegexp(value), 'g'), figures[key]);
-	}
-
-	return string;
+	return getReplacements().reduce(replaceCharToFallback, string);
 };
 
-module.exports = Object.assign(fn, figures);
+module.exports = Object.assign(replaceCharsToFallback, figures);
 module.exports.main = main;
 module.exports.windows = fallback;
