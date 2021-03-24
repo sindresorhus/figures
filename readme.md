@@ -79,7 +79,7 @@ Symbols to use when running on Windows.
 | circlePipe         |      Ⓘ      |   (│)   |
 | circleQuestionMark |      ?⃝     |   (?)   |
 | bullet             |      ●      |    ●    |
-| dot                |      ․      |    .    |
+| dot                |      ․      |    ․    |
 | line               |      ─      |    ─    |
 | ellipsis           |      …      |   ...   |
 | pointer            |      ❯      |    >    |
