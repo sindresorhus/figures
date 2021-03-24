@@ -79,7 +79,7 @@ const fallback = {
 	circleCross: '(×)',
 	circlePipe: '(│)',
 	circleQuestionMark: '(?)',
-	bullet: '*',
+	bullet: main.bullet,
 	dot: '.',
 	line: '─',
 	ellipsis: '...',

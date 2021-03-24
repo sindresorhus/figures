@@ -78,7 +78,7 @@ Symbols to use when running on Windows.
 | circleCross        |      ⓧ      |   (×)   |
 | circlePipe         |      Ⓘ      |   (│)   |
 | circleQuestionMark |      ?⃝     |   (?)   |
-| bullet             |      ●      |    *    |
+| bullet             |      ●      |    ●    |
 | dot                |      ․      |    .    |
 | line               |      ─      |    ─    |
 | ellipsis           |      …      |   ...   |
