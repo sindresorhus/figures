@@ -129,6 +129,7 @@ const fallback = {
 
 if (platform === 'linux') {
 	// The main one doesn't look that good on Ubuntu.
+	main.circleQuestionMark = '?';
 	main.questionMarkPrefix = '?';
 }
 
