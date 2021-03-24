@@ -95,6 +95,8 @@ Symbols to use when running on Windows.
 | arrowDown          |      ↓      |    ↓    |
 | arrowLeft          |      ←      |    ←    |
 | arrowRight         |      →      |    →    |
+| arrowLeftRight     |      ↔      |    ↔    |
+| arrowUpDown        |      ↕      |    ↕    |
 | radioOn            |      ◉      |   (*)   |
 | radioOff           |      ◯      |   ( )   |
 | checkboxOn         |      ☒      |   [×]   |
