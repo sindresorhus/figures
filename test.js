@@ -3,7 +3,7 @@ import figures from '.';
 
 const result = (main, windows) => process.platform === 'win32' ? windows : main;
 
-console.log('  ' + Object.keys(figures).map(symbol => figures[symbol]).join('  ') + '\n');
+console.log(`  ${Object.values(figures).join('  ')}\n`);
 
 test('figures', t => {
 	t.is(figures.tick, result('✔', '√'));
