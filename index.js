@@ -136,7 +136,7 @@ if (platform === 'linux') {
 const figures = platform === 'win32' ? fallback : main;
 
 const isFallbackFigure = ([key, mainValue]) => figures[key] !== mainValue;
-const getFigureRegExp = ([key, mainValue]) => [figures[key], new RegExp(escapeStringRegexp(mainValue), 'g')];
+const getFigureRegExp = ([key, mainValue]) => [new RegExp(escapeStringRegexp(mainValue), 'g'), figures[key]];
 
 let replacements = [];
 const getReplacements = () => {
@@ -150,15 +150,17 @@ const getReplacements = () => {
 	return replacements;
 };
 
-const replaceCharToFallback = (string, [fallbackValue, mainRegExp]) => string.replace(mainRegExp, fallbackValue);
-
 // On Windows, substitute non-fallback to fallback figures
 const replaceCharsToFallback = string => {
 	if (figures === main) {
 		return string;
 	}
 
-	return getReplacements().reduce(replaceCharToFallback, string);
+	for (const [mainRegExp, fallbackValue] of getReplacements()) {
+		string = string.replace(mainRegExp, fallbackValue);
+	}
+
+	return string;
 };
 
 module.exports = Object.assign(replaceCharsToFallback, figures);
