@@ -84,7 +84,7 @@ const fallback = {
 	bullet: main.bullet,
 	dot: main.dot,
 	line: main.line,
-	ellipsis: '...',
+	ellipsis: main.ellipsis,
 	pointer: '>',
 	pointerSmall: main.pointerSmall,
 	info: 'i',
