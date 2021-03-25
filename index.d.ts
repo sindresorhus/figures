@@ -33,6 +33,16 @@ declare const figureSet: {
 	readonly arrowRight: string;
 	readonly arrowLeftRight: string;
 	readonly arrowUpDown: string;
+	readonly subscriptZero: string;
+	readonly subscriptOne: string;
+	readonly subscriptTwo: string;
+	readonly subscriptThree: string;
+	readonly subscriptFour: string;
+	readonly subscriptFive: string;
+	readonly subscriptSix: string;
+	readonly subscriptSeven: string;
+	readonly subscriptEight: string;
+	readonly subscriptNine: string;
 	readonly radioOn: string;
 	readonly radioOff: string;
 	readonly checkboxOn: string;
