@@ -38,6 +38,8 @@ declare const figureSet: {
 	readonly smiley: string;
 	readonly mustache: string;
 	readonly heart: string;
+	readonly musicNote: string;
+	readonly musicNoteBeamed: string;
 	readonly nodejs: string;
 	readonly arrowUp: string;
 	readonly arrowDown: string;

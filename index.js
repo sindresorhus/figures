@@ -17,6 +17,8 @@ const common = {
 	triangleRightSmall: '▸',
 	home: '⌂',
 	heart: '♥',
+	musicNote: '♪',
+	musicNoteBeamed: '♫',
 	arrowUp: '↑',
 	arrowDown: '↓',
 	arrowLeft: '←',
