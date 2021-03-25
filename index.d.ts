@@ -47,6 +47,12 @@ declare const figureSet: {
 	readonly arrowRight: string;
 	readonly arrowLeftRight: string;
 	readonly arrowUpDown: string;
+	readonly almostEqual: string;
+	readonly notEqual: string;
+	readonly lessOrEqual: string;
+	readonly greaterOrEqual: string;
+	readonly identical: string;
+	readonly infinity: string;
 	readonly subscriptZero: string;
 	readonly subscriptOne: string;
 	readonly subscriptTwo: string;

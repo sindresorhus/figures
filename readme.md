@@ -111,6 +111,12 @@ Symbols to use when running on Windows.
 | arrowRight         |      →      |    →    |
 | arrowLeftRight     |      ↔      |    ↔    |
 | arrowUpDown        |      ↕      |    ↕    |
+| almostEqual        |      ≈      |    ≈    |
+| notEqual           |      ≠      |    ≠    |
+| lessOrEqual        |      ≤      |    ≤    |
+| greaterOrEqual     |      ≥      |    ≥    |
+| identical          |      ≡      |    ≡    |
+| infinity           |      ∞      |    ∞    |
 | radioOn            |      ◉      |   (*)   |
 | radioOff           |      ◯      |   ( )   |
 | checkboxOn         |      ☒      |   [×]   |
