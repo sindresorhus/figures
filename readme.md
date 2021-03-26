@@ -63,95 +63,95 @@ Symbols to use when running on Windows.
 
 | Name               | Non-Windows | Windows |
 | ------------------ | :---------: | :-----: |
-| tick               |      ✔      |    √    |
-| cross              |      ✖      |    ×    |
-| star               |      ★      |    ✶    |
-| square             |      ▇      |    █    |
-| squareSmall        |      ◻      |    □    |
-| squareSmallFilled  |      ◼      |    ■    |
-| play               |      ▶      |    ►    |
-| circle             |      ◯      |   ( )   |
-| circleFilled       |      ◉      |   (*)   |
-| circleDotted       |      ◌      |   ( )   |
-| circleDouble       |      ◎      |   ( )   |
-| circleCircle       |      ⓞ      |   (○)   |
-| circleCross        |      ⓧ      |   (×)   |
-| circlePipe         |      Ⓘ      |   (│)   |
-| circleQuestionMark |      ?⃝     |   (?)   |
-| bullet             |      ●      |    ●    |
-| dot                |      ․      |    ․    |
-| line               |      ─      |    ─    |
-| ellipsis           |      …      |    …    |
-| pointer            |      ❯      |    >    |
-| pointerSmall       |      ›      |    ›    |
-| triangleUp         |      ▲      |    ▲    |
-| triangleUpSmall    |      ▴      |    ▴    |
-| triangleUpOutline  |      △      |    ∆    |
-| triangleDown       |      ▼      |    ▼    |
-| triangleDownSmall  |      ▾      |    ▾    |
-| triangleLeft       |      ◀      |    ◄    |
-| triangleLeftSmall  |      ◂      |    ◂    |
-| triangleRight      |      ▶      |    ►    |
-| triangleRightSmall |      ▸      |    ▸    |
-| lozenge            |      ◆      |    ♦    |
-| lozengeOutline     |      ◇      |    ◊    |
-| home               |      ⌂      |    ⌂    |
-| info               |      ℹ      |    i    |
-| warning            |      ⚠      |    ‼    |
-| hamburger          |      ☰      |    ≡    |
-| smiley             |      ㋡      |    ☺    |
-| mustache           |      ෴      |   ┌─┐   |
-| heart              |      ♥      |    ♥    |
-| musicNote          |      ♪      |    ♪    |
-| musicNoteBeamed    |      ♫      |    ♫    |
-| nodejs             |      ⬢      |    ♦    |
-| arrowUp            |      ↑      |    ↑    |
-| arrowDown          |      ↓      |    ↓    |
-| arrowLeft          |      ←      |    ←    |
-| arrowRight         |      →      |    →    |
-| arrowLeftRight     |      ↔      |    ↔    |
-| arrowUpDown        |      ↕      |    ↕    |
-| almostEqual        |      ≈      |    ≈    |
-| notEqual           |      ≠      |    ≠    |
-| lessOrEqual        |      ≤      |    ≤    |
-| greaterOrEqual     |      ≥      |    ≥    |
-| identical          |      ≡      |    ≡    |
-| infinity           |      ∞      |    ∞    |
-| radioOn            |      ◉      |   (*)   |
-| radioOff           |      ◯      |   ( )   |
-| checkboxOn         |      ☒      |   [×]   |
-| checkboxOff        |      ☐      |   [ ]   |
-| checkboxCircleOn   |      ⓧ      |   (×)   |
-| checkboxCircleOff  |      Ⓘ      |   ( )   |
-| questionMarkPrefix |      ?⃝     |    ？    |
-| subscriptZero      |      ₀      |    ₀    |
-| subscriptOne       |      ₁      |    ₁    |
-| subscriptTwo       |      ₂      |    ₂    |
-| subscriptThree     |      ₃      |    ₃    |
-| subscriptFour      |      ₄      |    ₄    |
-| subscriptFive      |      ₅      |    ₅    |
-| subscriptSix       |      ₆      |    ₆    |
-| subscriptSeven     |      ₇      |    ₇    |
-| subscriptEight     |      ₈      |    ₈    |
-| subscriptNine      |      ₉      |    ₉    |
-| oneHalf            |      ½      |    ½    |
-| oneThird           |      ⅓      |    ⅓    |
-| oneQuarter         |      ¼      |    ¼    |
-| oneFifth           |      ⅕      |    ⅕    |
-| oneSixth           |      ⅙      |    ⅙    |
-| oneSeventh         |      ⅐      |   1/7   |
-| oneEighth          |      ⅛      |    ⅛    |
-| oneNinth           |      ⅑      |   1/9   |
-| oneTenth           |      ⅒      |   1/10  |
-| twoThirds          |      ⅔      |    ⅔    |
-| twoFifths          |      ⅖      |    ⅖    |
-| threeQuarters      |      ¾      |    ¾    |
-| threeFifths        |      ⅗      |    ⅗    |
-| threeEighths       |      ⅜      |    ⅜    |
-| fourFifths         |      ⅘      |    ⅘    |
-| fiveSixths         |      ⅚      |    ⅚    |
-| fiveEighths        |      ⅝      |    ⅝    |
-| sevenEighths       |      ⅞      |    ⅞    |
+| tick               |     `✔`     |   `√`   |
+| cross              |     `✖`     |   `×`   |
+| star               |     `★`     |   `✶`   |
+| square             |     `▇`     |   `█`   |
+| squareSmall        |     `◻`     |   `□`   |
+| squareSmallFilled  |     `◼`     |   `■`   |
+| play               |     `▶`     |   `►`   |
+| circle             |     `◯`     |  `( )`  |
+| circleFilled       |     `◉`     |  `(*)`  |
+| circleDotted       |     `◌`     |  `( )`  |
+| circleDouble       |     `◎`     |  `( )`  |
+| circleCircle       |     `ⓞ`     |  `(○)`  |
+| circleCross        |     `ⓧ`     |  `(×)`  |
+| circlePipe         |     `Ⓘ`     |  `(│)`  |
+| circleQuestionMark |     `?⃝ `   |  `(?)`  |
+| bullet             |     `●`     |   `●`   |
+| dot                |     `․`     |   `․`   |
+| line               |     `─`     |   `─`   |
+| ellipsis           |     `…`     |   `…`   |
+| pointer            |     `❯`     |   `>`   |
+| pointerSmall       |     `›`     |   `›`   |
+| triangleUp         |     `▲`     |   `▲`   |
+| triangleUpSmall    |     `▴`     |   `▴`   |
+| triangleUpOutline  |     `△`     |   `∆`   |
+| triangleDown       |     `▼`     |   `▼`   |
+| triangleDownSmall  |     `▾`     |   `▾`   |
+| triangleLeft       |     `◀`     |   `◄`   |
+| triangleLeftSmall  |     `◂`     |   `◂`   |
+| triangleRight      |     `▶`     |   `►`   |
+| triangleRightSmall |     `▸`     |   `▸`   |
+| lozenge            |     `◆`     |   `♦`   |
+| lozengeOutline     |     `◇`     |   `◊`   |
+| home               |     `⌂`     |   `⌂`   |
+| info               |     `ℹ`     |   `i`   |
+| warning            |     `⚠`     |   `‼`   |
+| hamburger          |     `☰`     |   `≡`   |
+| smiley             |     `㋡`    |   `☺`   |
+| mustache           |     `෴`     |  `┌─┐`  |
+| heart              |     `♥`     |   `♥`   |
+| musicNote          |     `♪`     |   `♪`   |
+| musicNoteBeamed    |     `♫`     |   `♫`   |
+| nodejs             |     `⬢`     |   `♦`   |
+| arrowUp            |     `↑`     |   `↑`   |
+| arrowDown          |     `↓`     |   `↓`   |
+| arrowLeft          |     `←`     |   `←`   |
+| arrowRight         |     `→`     |   `→`   |
+| arrowLeftRight     |     `↔`     |   `↔`   |
+| arrowUpDown        |     `↕`     |   `↕`   |
+| almostEqual        |     `≈`     |   `≈`   |
+| notEqual           |     `≠`     |   `≠`   |
+| lessOrEqual        |     `≤`     |   `≤`   |
+| greaterOrEqual     |     `≥`     |   `≥`   |
+| identical          |     `≡`     |   `≡`   |
+| infinity           |     `∞`     |   `∞`   |
+| radioOn            |     `◉`     |  `(*)`  |
+| radioOff           |     `◯`     |  `( )`  |
+| checkboxOn         |     `☒`     |  `[×]`  |
+| checkboxOff        |     `☐`     |  `[ ]`  |
+| checkboxCircleOn   |     `ⓧ`     |  `(×)`  |
+| checkboxCircleOff  |     `Ⓘ`     |  `( )`  |
+| questionMarkPrefix |     `?⃝ `   |   `？`   |
+| subscriptZero      |     `₀`     |   `₀`   |
+| subscriptOne       |     `₁`     |   `₁`   |
+| subscriptTwo       |     `₂`     |   `₂`   |
+| subscriptThree     |     `₃`     |   `₃`   |
+| subscriptFour      |     `₄`     |   `₄`   |
+| subscriptFive      |     `₅`     |   `₅`   |
+| subscriptSix       |     `₆`     |   `₆`   |
+| subscriptSeven     |     `₇`     |   `₇`   |
+| subscriptEight     |     `₈`     |   `₈`   |
+| subscriptNine      |     `₉`     |   `₉`   |
+| oneHalf            |     `½`     |   `½`   |
+| oneThird           |     `⅓`     |   `⅓`   |
+| oneQuarter         |     `¼`     |   `¼`   |
+| oneFifth           |     `⅕`     |   `⅕`   |
+| oneSixth           |     `⅙`     |   `⅙`   |
+| oneSeventh         |     `⅐`     |  `1/7`  |
+| oneEighth          |     `⅛`     |   `⅛`   |
+| oneNinth           |     `⅑`     |  `1/9`  |
+| oneTenth           |     `⅒`     |  `1/10` |
+| twoThirds          |     `⅔`     |   `⅔`   |
+| twoFifths          |     `⅖`     |   `⅖`   |
+| threeQuarters      |     `¾`     |   `¾`   |
+| threeFifths        |     `⅗`     |   `⅗`   |
+| threeEighths       |     `⅜`     |   `⅜`   |
+| fourFifths         |     `⅘`     |   `⅘`   |
+| fiveSixths         |     `⅚`     |   `⅚`   |
+| fiveEighths        |     `⅝`     |   `⅝`   |
+| sevenEighths       |     `⅞`     |   `⅞`   |
 
 
 ## Related
