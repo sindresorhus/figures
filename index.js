@@ -4,6 +4,7 @@ const escapeStringRegexp = require('escape-string-regexp');
 const {platform} = process;
 
 const common = {
+	square: '█',
 	bullet: '●',
 	dot: '․',
 	line: '─',
@@ -63,7 +64,6 @@ const main = {
 	tick: '✔',
 	cross: '✖',
 	star: '★',
-	square: '▇',
 	squareSmall: '◻',
 	squareSmallFilled: '◼',
 	play: '▶',
@@ -104,7 +104,6 @@ const fallback = {
 	tick: '√',
 	cross: '×',
 	star: '✶',
-	square: '█',
 	squareSmall: '□',
 	squareSmallFilled: '■',
 	play: '►',
