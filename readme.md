@@ -71,6 +71,14 @@ Symbols to use when running on Windows.
 | square             | `█`  |         |
 | squareSmall        | `◻`  |   `□`   |
 | squareSmallFilled  | `◼`  |   `■`   |
+| squareDarkShade    | `▓`  |         |
+| squareMediumShade  | `▒`  |         |
+| squareLightShade   | `░`  |         |
+| squareTop          | `▀`  |         |
+| squareBottom       | `▄`  |         |
+| squareLeft         | `▌`  |         |
+| squareRight        | `▐`  |         |
+| squareCenter       | `■`  |         |
 | play               | `▶`  |   `►`   |
 | circle             | `◯`  |  `( )`  |
 | circleFilled       | `◉`  |  `(*)`  |
