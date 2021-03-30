@@ -1,7 +1,8 @@
 declare const figureSet: {
 	readonly tick: string;
+	readonly info: string;
+	readonly warning: string;
 	readonly cross: string;
-	readonly star: string;
 	readonly square: string;
 	readonly squareSmall: string;
 	readonly squareSmallFilled: string;
@@ -13,7 +14,6 @@ declare const figureSet: {
 	readonly squareLeft: string;
 	readonly squareRight: string;
 	readonly squareCenter: string;
-	readonly play: string;
 	readonly circle: string;
 	readonly circleFilled: string;
 	readonly circleDotted: string;
@@ -22,9 +22,15 @@ declare const figureSet: {
 	readonly circleCross: string;
 	readonly circlePipe: string;
 	readonly circleQuestionMark: string;
+	readonly radioOn: string;
+	readonly radioOff: string;
+	readonly checkboxOn: string;
+	readonly checkboxOff: string;
+	readonly checkboxCircleOn: string;
+	readonly checkboxCircleOff: string;
+	readonly questionMarkPrefix: string;
 	readonly bullet: string;
 	readonly dot: string;
-	readonly line: string;
 	readonly ellipsis: string;
 	readonly pointer: string;
 	readonly pointerSmall: string;
@@ -40,12 +46,12 @@ declare const figureSet: {
 	readonly lozenge: string;
 	readonly lozengeOutline: string;
 	readonly home: string;
-	readonly info: string;
-	readonly warning: string;
 	readonly hamburger: string;
 	readonly smiley: string;
 	readonly mustache: string;
 	readonly heart: string;
+	readonly star: string;
+	readonly play: string;
 	readonly musicNote: string;
 	readonly musicNoteBeamed: string;
 	readonly nodejs: string;
@@ -71,13 +77,6 @@ declare const figureSet: {
 	readonly subscriptSeven: string;
 	readonly subscriptEight: string;
 	readonly subscriptNine: string;
-	readonly radioOn: string;
-	readonly radioOff: string;
-	readonly checkboxOn: string;
-	readonly checkboxOff: string;
-	readonly checkboxCircleOn: string;
-	readonly checkboxCircleOff: string;
-	readonly questionMarkPrefix: string;
 	readonly oneHalf: string;
 	readonly oneThird: string;
 	readonly oneQuarter: string;
@@ -96,6 +95,7 @@ declare const figureSet: {
 	readonly fiveSixths: string;
 	readonly fiveEighths: string;
 	readonly sevenEighth: string;
+	readonly line: string;
 	readonly lineBold: string;
 	readonly lineDouble: string;
 	readonly lineDashed0: string;

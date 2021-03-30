@@ -66,8 +66,9 @@ Symbols to use when running on Windows.
 | Name                                        | Main | Windows |
 | ------------------------------------------- | :--: | :-----: |
 | tick                                        | `✔`  |   `√`   |
+| info                                        | `ℹ`  |   `i`   |
+| warning                                     | `⚠`  |   `‼`   |
 | cross                                       | `✖`  |   `×`   |
-| star                                        | `★`  |   `✶`   |
 | square                                      | `█`  |         |
 | squareSmall                                 | `◻`  |   `□`   |
 | squareSmallFilled                           | `◼`  |   `■`   |
@@ -79,7 +80,6 @@ Symbols to use when running on Windows.
 | squareLeft                                  | `▌`  |         |
 | squareRight                                 | `▐`  |         |
 | squareCenter                                | `■`  |         |
-| play                                        | `▶`  |   `►`   |
 | circle                                      | `◯`  |  `( )`  |
 | circleFilled                                | `◉`  |  `(*)`  |
 | circleDotted                                | `◌`  |  `( )`  |
@@ -88,9 +88,15 @@ Symbols to use when running on Windows.
 | circleCross                                 | `ⓧ`  |  `(×)`  |
 | circlePipe                                  | `Ⓘ`  |  `(│)`  |
 | circleQuestionMark                          | `?⃝ ` |  `(?)`  |
+| radioOn                                     | `◉`  |  `(*)`  |
+| radioOff                                    | `◯`  |  `( )`  |
+| checkboxOn                                  | `☒`  |  `[×]`  |
+| checkboxOff                                 | `☐`  |  `[ ]`  |
+| checkboxCircleOn                            | `ⓧ`  |  `(×)`  |
+| checkboxCircleOff                           | `Ⓘ`  |  `( )`  |
+| questionMarkPrefix                          | `?⃝ ` |   `？`  |
 | bullet                                      | `●`  |         |
 | dot                                         | `․`  |         |
-| line                                        | `─`  |         |
 | ellipsis                                    | `…`  |         |
 | pointer                                     | `❯`  |   `>`   |
 | pointerSmall                                | `›`  |   `›`   |
@@ -106,12 +112,12 @@ Symbols to use when running on Windows.
 | lozenge                                     | `◆`  |   `♦`   |
 | lozengeOutline                              | `◇`  |   `◊`   |
 | home                                        | `⌂`  |         |
-| info                                        | `ℹ`  |   `i`   |
-| warning                                     | `⚠`  |   `‼`   |
 | hamburger                                   | `☰`  |   `≡`   |
 | smiley                                      | `㋡` |   `☺`   |
 | mustache                                    | `෴`  |  `┌─┐`  |
 | heart                                       | `♥`  |         |
+| star                                        | `★`  |   `✶`   |
+| play                                        | `▶`  |   `►`   |
 | musicNote                                   | `♪`  |         |
 | musicNoteBeamed                             | `♫`  |         |
 | nodejs                                      | `⬢`  |   `♦`   |
@@ -127,13 +133,6 @@ Symbols to use when running on Windows.
 | greaterOrEqual                              | `≥`  |         |
 | identical                                   | `≡`  |         |
 | infinity                                    | `∞`  |         |
-| radioOn                                     | `◉`  |  `(*)`  |
-| radioOff                                    | `◯`  |  `( )`  |
-| checkboxOn                                  | `☒`  |  `[×]`  |
-| checkboxOff                                 | `☐`  |  `[ ]`  |
-| checkboxCircleOn                            | `ⓧ`  |  `(×)`  |
-| checkboxCircleOff                           | `Ⓘ`  |  `( )`  |
-| questionMarkPrefix                          | `?⃝ ` |   `？`  |
 | subscriptZero                               | `₀`  |         |
 | subscriptOne                                | `₁`  |         |
 | subscriptTwo                                | `₂`  |         |
@@ -162,6 +161,7 @@ Symbols to use when running on Windows.
 | fiveSixths                                  | `⅚`  |         |
 | fiveEighths                                 | `⅝`  |         |
 | sevenEighths                                | `⅞`  |         |
+| line                                        | `─`  |         |
 | lineBold                                    | `━`  |         |
 | lineDouble                                  | `═`  |         |
 | lineDashed0                                 | `┄`  |         |
