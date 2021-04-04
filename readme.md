@@ -298,6 +298,15 @@ Symbols to use when running on Windows.
 
 If you cannot find the character you're looking for in the table above, please look at this full list of [cross-platform terminal characters](https://github.com/ehmicky/cross-platform-terminal-characters).
 
+## Unsupported terminals
+
+The following terminals are not officially supported:
+  - xterm
+  - Linux Terminal (kernel)
+  - cmder
+
+They can display most but not all of the figures listed above.
+
 ## Related
 
 - [log-symbols](https://github.com/sindresorhus/log-symbols) - Colored symbols for various log levels
