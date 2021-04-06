@@ -301,11 +301,12 @@ If you cannot find the character you're looking for in the table above, please l
 ## Unsupported terminals
 
 The following terminals are not officially supported:
-  - xterm
-  - Linux Terminal (kernel)
-  - cmder
 
-They can display most but not all of the figures listed above.
+- xterm
+- Linux Terminal (kernel)
+- cmder
+
+They can display most but not all of the symbols listed above.
 
 ## Related
 
