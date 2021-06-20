@@ -21,7 +21,7 @@ See the [source](index.js) for supported symbols.
 ```js
 const figures = require('figures');
 
-console.log(figures('✔︎ check'));
+console.log(figures.replaceSymbols('✔︎ check'));
 // On non-Windows OSes:  ✔︎ check
 // On Windows:           √ check
 
@@ -38,7 +38,7 @@ console.log(figures.windows.tick);
 
 ## API
 
-### figures(string)
+### figures.replaceSymbols(string)
 
 Returns the input with replaced fallback Unicode symbols on Windows.
 

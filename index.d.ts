@@ -251,7 +251,7 @@ declare const figures: {
 	// On Windows:           √
 	```
 	*/
-	(string: string): string;
+	replaceSymbols(string: string): string;
 
 	/**
 	Symbols to use when not running on Windows.

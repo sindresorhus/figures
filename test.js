@@ -1,35 +1,34 @@
 import test from 'ava';
-import figures from '.';
+import figures, {replaceSymbols, main, windows} from '.';
 
 const result = (main, windows) => process.platform === 'win32' ? windows : main;
 
-console.log(`  ${Object.values(figures).join('  ')}\n`);
+const NON_FIGURE_KEYS = new Set(['main', 'windows', 'replaceSymbols']);
+const isFigureKey = ([key]) => !NON_FIGURE_KEYS.has(key);
+const getFigure = ([, figure]) => figure;
+const getFigures = () => Object.entries(figures).filter(isFigureKey).map(getFigure);
+
+console.log(`  ${getFigures().join('  ')}\n`);
 
 test('figures', t => {
 	t.is(figures.tick, result('✔', '√'));
 });
 
 test('fallbacks', t => {
-	t.is(figures('foo'), 'foo');
-	t.is(figures('?bar?'), '?bar?');
-	t.is(figures('✔ ✔ ✔'), result('✔ ✔ ✔', '√ √ √'));
-	t.is(figures('✔ ✖\n★ ◼'), result('✔ ✖\n★ ◼', '√ ×\n✶ ■'));
-	t.is(figures('✔ ✖ ★ ◼'), result('✔ ✖ ★ ◼', '√ × ✶ ■'));
+	t.is(replaceSymbols('foo'), 'foo');
+	t.is(replaceSymbols('?bar?'), '?bar?');
+	t.is(replaceSymbols('✔ ✔ ✔'), result('✔ ✔ ✔', '√ √ √'));
+	t.is(replaceSymbols('✔ ✖\n★ ◼'), result('✔ ✖\n★ ◼', '√ ×\n✶ ■'));
+	t.is(replaceSymbols('✔ ✖ ★ ◼'), result('✔ ✖ ★ ◼', '√ × ✶ ■'));
 });
 
 test('exported sets', t => {
-	t.is(figures.main.tick, '✔');
-	t.is(figures.windows.tick, '√');
+	t.is(main.tick, '✔');
+	t.is(windows.tick, '√');
 });
 
-const NON_FIGURE_KEYS = new Set(['main', 'windows']);
-
 test('figures are non-empty strings', t => {
-	for (const [key, figure] of Object.entries(figures)) {
-		if (NON_FIGURE_KEYS.has(key)) {
-			continue;
-		}
-
+	for (const figure of getFigures()) {
 		t.true(typeof figure === 'string' && figure.trim() !== '');
 	}
 });
