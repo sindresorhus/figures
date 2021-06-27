@@ -291,7 +291,7 @@ const shouldUseMain = isUnicodeSupported();
 const figures = shouldUseMain ? mainSymbols : windowsSymbols;
 export default figures;
 
-const isWindowsSymbol = (key, mainSymbol) => figures[key] !== mainSymbol;
+const isWindowsSymbol = (key, mainSymbol) => windowsSymbols[key] !== mainSymbol;
 const getFigureRegExp = (key, mainSymbol) => [new RegExp(escapeStringRegexp(mainSymbol), 'g'), windowsSymbols[key]];
 
 let replacements = [];
