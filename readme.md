@@ -1,12 +1,12 @@
 # figures
 
-> Unicode symbols with Windows CMD fallbacks
+> Unicode symbols with fallbacks for older terminals
 
 [![](screenshot.png)](index.js)
 
 [*and more...*](index.js)
 
-Windows CMD only supports a [limited character set](http://en.wikipedia.org/wiki/Code_page_437).
+Terminals such as Windows Console Host (and CMD) only support a [limited character set](http://en.wikipedia.org/wiki/Code_page_437).
 
 ## Install
 
@@ -17,21 +17,21 @@ $ npm install figures
 ## Usage
 
 ```js
-import figures, {replaceSymbols, mainSymbols, windowsSymbols} from 'figures';
+import figures, {replaceSymbols, mainSymbols, fallbackSymbols} from 'figures';
 
 console.log(figures.tick);
-// On non-Windows OSes:  ✔︎
-// On Windows:           √
+// On terminals with Unicode symbols:  ✔︎
+// On other terminals:                 √
 
 console.log(figures.mainSymbols.tick);
-// On all OSes:  ✔︎
+// On all terminals:  ✔︎
 
-console.log(figures.windowsSymbols.tick);
-// On all OSes:  √
+console.log(figures.fallbackSymbols.tick);
+// On all terminal:  √
 
 console.log(figures.replaceSymbols('✔︎ check'));
-// On non-Windows OSes:  ✔︎ check
-// On Windows:           √ check
+// On terminals with Unicode symbols:  ✔︎ check
+// On other terminals:                 √ check
 ```
 
 ## API
@@ -44,15 +44,15 @@ Symbols to use on any terminal.
 
 ### mainSymbols
 
-Symbols to use when not running on Windows.
+Symbols to use when the terminal supports Unicode symbols.
 
-### windowsSymbols
+### fallbackSymbols
 
-Symbols to use when running on Windows.
+Symbols to use when the terminal does not support Unicode symbols.
 
 ### replaceSymbols(string)
 
-Returns the input with replaced fallback Unicode symbols on Windows.
+Returns the input with replaced fallback Unicode symbols on older terminals.
 
 All the below [figures](#figures) are attached to the default export as shown in the example above.
 
@@ -60,15 +60,15 @@ All the below [figures](#figures) are attached to the default export as shown in
 
 Type: `string`
 
-String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
+String where the Unicode symbols will be replaced with fallback symbols depending on the terminal.
 
 
 ## Figures
 
-`Windows` characters are only shown when they differ from the `Main` ones.
+`Fallback` characters are only shown when they differ from the `Main` ones.
 
-| Name                                        | Main | Windows |
-| ------------------------------------------- | :--: | :-----: |
+| Name                                        | Main | Fallback |
+| ------------------------------------------- | :--: | :------: |
 | tick                                        | `✔`  |   `√`   |
 | info                                        | `ℹ`  |   `i`   |
 | warning                                     | `⚠`  |   `‼`   |

@@ -232,37 +232,37 @@ declare const figureSet: {
 type FigureSet = typeof figureSet;
 
 /**
-Symbols to use when not running on Windows.
+Symbols to use when the terminal supports Unicode symbols.
 */
 export const mainSymbols: FigureSet;
 
 /**
-Symbols to use when running on Windows.
+Symbols to use when the terminal does not support Unicode symbols.
 */
-export const windowsSymbols: FigureSet;
+export const fallbackSymbols: FigureSet;
 
 /**
-Symbols to use on any OS.
+Symbols to use on any terminal.
 */
 export default figureSet;
 
 /**
-Replace Unicode symbols depending on the OS.
+Replace Unicode symbols depending on the terminal.
 
-@param string - String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
-@returns The input with replaced fallback Unicode symbols on Windows.
+@param string - String where the Unicode symbols will be replaced with fallback symbols depending on the terminal.
+@returns The input with replaced fallback Unicode symbols.
 
 @example
 ```
 import figures, {replaceSymbols} from 'figures';
 
 console.log(replaceSymbols('✔︎ check'));
-// On non-Windows OSes:  ✔︎ check
-// On Windows:           √ check
+// On terminals with Unicode symbols:  ✔︎ check
+// On other terminals:                 √ check
 
 console.log(figures.tick);
-// On non-Windows OSes:  ✔︎
-// On Windows:           √
+// On terminals with Unicode symbols:  ✔︎
+// On other terminals:                 √
 ```
 */
 export function replaceSymbols(string: string): string;

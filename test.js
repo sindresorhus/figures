@@ -1,8 +1,8 @@
 import test from 'ava';
 import isUnicodeSupported from 'is-unicode-supported';
-import figures, {replaceSymbols, mainSymbols, windowsSymbols} from './index.js';
+import figures, {replaceSymbols, mainSymbols, fallbackSymbols} from './index.js';
 
-const result = (mainSymbols, windowsSymbols) => isUnicodeSupported() ? mainSymbols : windowsSymbols;
+const result = (mainSymbols, fallbackSymbols) => isUnicodeSupported() ? mainSymbols : fallbackSymbols;
 
 console.log(`  ${Object.values(figures).join('  ')}\n`);
 
@@ -20,7 +20,7 @@ test('replaceSymbols()', t => {
 
 test('mainSymbols and windowsSymbols', t => {
 	t.is(mainSymbols.tick, '✔');
-	t.is(windowsSymbols.tick, '√');
+	t.is(fallbackSymbols.tick, '√');
 });
 
 test('figures are non-empty strings', t => {

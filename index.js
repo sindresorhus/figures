@@ -248,7 +248,7 @@ export const mainSymbols = {
 	oneTenth: '⅒'
 };
 
-export const windowsSymbols = {
+export const fallbackSymbols = {
 	...common,
 	tick: '√',
 	info: 'i',
@@ -289,11 +289,11 @@ export const windowsSymbols = {
 };
 
 const shouldUseMain = isUnicodeSupported();
-const figures = shouldUseMain ? mainSymbols : windowsSymbols;
+const figures = shouldUseMain ? mainSymbols : fallbackSymbols;
 export default figures;
 
-const isWindowsSymbol = (key, mainSymbol) => windowsSymbols[key] !== mainSymbol;
-const getFigureRegExp = (key, mainSymbol) => [new RegExp(escapeStringRegexp(mainSymbol), 'g'), windowsSymbols[key]];
+const isFallbackSymbol = (key, mainSymbol) => fallbackSymbols[key] !== mainSymbol;
+const getFigureRegExp = (key, mainSymbol) => [new RegExp(escapeStringRegexp(mainSymbol), 'g'), fallbackSymbols[key]];
 
 let replacements = [];
 const getReplacements = () => {
@@ -302,19 +302,19 @@ const getReplacements = () => {
 	}
 
 	replacements = Object.entries(mainSymbols)
-		.filter(([key, mainSymbol]) => isWindowsSymbol(key, mainSymbol))
+		.filter(([key, mainSymbol]) => isFallbackSymbol(key, mainSymbol))
 		.map(([key, mainSymbol]) => getFigureRegExp(key, mainSymbol));
 	return replacements;
 };
 
-// On Windows, substitute non-Windows to Windows figures
+// On terminals which do not support Unicode symbols, substitute them to other symbols
 export const replaceSymbols = string => {
 	if (shouldUseMain) {
 		return string;
 	}
 
-	for (const [figureRegExp, windowsSymbol] of getReplacements()) {
-		string = string.replace(figureRegExp, windowsSymbol);
+	for (const [figureRegExp, fallbackSymbol] of getReplacements()) {
+		string = string.replace(figureRegExp, fallbackSymbol);
 	}
 
 	return string;
