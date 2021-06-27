@@ -19,7 +19,7 @@ $ npm install figures
 See the [source](index.js) for supported symbols.
 
 ```js
-const figures = require('figures');
+import figures, {replaceSymbols, mainSymbols, windowsSymbols} from 'figures';
 
 console.log(figures.replaceSymbols('✔︎ check'));
 // On non-Windows OSes:  ✔︎ check
@@ -38,7 +38,7 @@ console.log(figures.windowsSymbols.tick);
 
 ## API
 
-### figures.replaceSymbols(string)
+### replaceSymbols(string)
 
 Returns the input with replaced fallback Unicode symbols on Windows.
 
@@ -50,11 +50,11 @@ Type: `string`
 
 String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
 
-### figures.mainSymbols
+### mainSymbols
 
 Symbols to use when not running on Windows.
 
-### figures.windowsSymbols
+### windowsSymbols
 
 Symbols to use when running on Windows.
 

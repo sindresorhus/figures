@@ -1,5 +1,4 @@
-'use strict';
-const escapeStringRegexp = require('escape-string-regexp');
+import escapeStringRegexp from 'escape-string-regexp';
 
 const {platform} = process;
 
@@ -198,8 +197,17 @@ const common = {
 	lineSlash: '╱'
 };
 
-const mainSymbols = {
+// The main symbols for those do not look that good on Ubuntu.
+const linuxMainSymbols = platform === 'linux' ?
+	{} :
+	{
+		circleQuestionMark: '?',
+		questionMarkPrefix: '?'
+	};
+
+export const mainSymbols = {
 	...common,
+	...linuxMainSymbols,
 	tick: '✔',
 	info: 'ℹ',
 	warning: '⚠',
@@ -238,7 +246,7 @@ const mainSymbols = {
 	oneTenth: '⅒'
 };
 
-const windowsSymbols = {
+export const windowsSymbols = {
 	...common,
 	tick: '√',
 	info: 'i',
@@ -278,15 +286,10 @@ const windowsSymbols = {
 	oneTenth: '1/10'
 };
 
-if (platform === 'linux') {
-	// The main symbols for those do not look that good on Ubuntu.
-	mainSymbols.circleQuestionMark = '?';
-	mainSymbols.questionMarkPrefix = '?';
-}
-
 // TODO: Use https://github.com/sindresorhus/is-unicode-supported when targeting Node.js 10.
 const shouldUseWindows = platform === 'win32';
 const figures = shouldUseWindows ? windowsSymbols : mainSymbols;
+export default figures;
 
 const isWindowsSymbol = ([key, mainSymbol]) => figures[key] !== mainSymbol;
 const getFigureRegExp = ([key, mainSymbol]) => [new RegExp(escapeStringRegexp(mainSymbol), 'g'), windowsSymbols[key]];
@@ -303,10 +306,8 @@ const getReplacements = () => {
 	return replacements;
 };
 
-module.exports = figures;
-
 // On Windows, substitute non-Windows to Windows figures
-module.exports.replaceSymbols = string => {
+export const replaceSymbols = string => {
 	if (!shouldUseWindows) {
 		return string;
 	}
@@ -317,6 +318,3 @@ module.exports.replaceSymbols = string => {
 
 	return string;
 };
-
-module.exports.mainSymbols = mainSymbols;
-module.exports.windowsSymbols = windowsSymbols;

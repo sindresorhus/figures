@@ -227,41 +227,43 @@ declare const figureSet: {
 	readonly lineCross: string;
 	readonly lineBackslash: string;
 	readonly lineSlash: string;
-}
+};
 
-type FigureSet = typeof figureSet
+type FigureSet = typeof figureSet;
 
-declare const figures: {
-	/**
-	Replace Unicode symbols depending on the OS.
+/**
+Symbols to use when not running on Windows.
+*/
+export const mainSymbols: FigureSet;
 
-	@param string - String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
-	@returns The input with replaced fallback Unicode symbols on Windows.
+/**
+Symbols to use when running on Windows.
+*/
+export const windowsSymbols: FigureSet;
 
-	@example
-	```
-	import figures = require('figures');
+/**
+Symbols to use on any OS.
+*/
+export default figureSet;
 
-	console.log(figures('✔︎ check'));
-	// On non-Windows OSes:  ✔︎ check
-	// On Windows:           √ check
+/**
+Replace Unicode symbols depending on the OS.
 
-	console.log(figures.tick);
-	// On non-Windows OSes:  ✔︎
-	// On Windows:           √
-	```
-	*/
-	replaceSymbols(string: string): string;
+@param string - String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
+@returns The input with replaced fallback Unicode symbols on Windows.
 
-	/**
-	Symbols to use when not running on Windows.
-	*/
-	readonly mainSymbols: FigureSet;
+@example
+```
+import figures, {replaceSymbols} from 'figures';
 
-	/**
-	Symbols to use when running on Windows.
-	*/
-	readonly windowsSymbols: FigureSet;
-} & FigureSet;
+console.log(replaceSymbols('✔︎ check'));
+// On non-Windows OSes:  ✔︎ check
+// On Windows:           √ check
 
-export = figures;
+console.log(figures.tick);
+// On non-Windows OSes:  ✔︎
+// On Windows:           √
+```
+*/
+export function replaceSymbols(string: string): string;
+
