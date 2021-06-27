@@ -29,10 +29,10 @@ console.log(figures.tick);
 // On non-Windows OSes:  ✔︎
 // On Windows:           √
 
-console.log(figures.main.tick);
+console.log(figures.mainSymbols.tick);
 // On all OSes:  ✔︎
 
-console.log(figures.windows.tick);
+console.log(figures.windowsSymbols.tick);
 // On all OSes:  √
 ```
 
@@ -42,7 +42,7 @@ console.log(figures.windows.tick);
 
 Returns the input with replaced fallback Unicode symbols on Windows.
 
-All the below [figures](#figures) are attached to the main export as shown in the example above.
+All the below [figures](#figures) are attached to the default export as shown in the example above.
 
 #### string
 
@@ -50,11 +50,11 @@ Type: `string`
 
 String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
 
-### figures.main
+### figures.mainSymbols
 
 Symbols to use when not running on Windows.
 
-### figures.windows
+### figures.windowsSymbols
 
 Symbols to use when running on Windows.
 

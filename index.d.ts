@@ -256,12 +256,12 @@ declare const figures: {
 	/**
 	Symbols to use when not running on Windows.
 	*/
-	readonly main: FigureSet;
+	readonly mainSymbols: FigureSet;
 
 	/**
 	Symbols to use when running on Windows.
 	*/
-	readonly windows: FigureSet;
+	readonly windowsSymbols: FigureSet;
 } & FigureSet;
 
 export = figures;
