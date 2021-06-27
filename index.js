@@ -198,17 +198,20 @@ const common = {
 	lineSlash: '╱'
 };
 
-// The main symbols for those do not look that good on Ubuntu.
-const linuxMainSymbols = platform === 'linux' ?
-	{} :
-	{
-		circleQuestionMark: '?',
-		questionMarkPrefix: '?'
-	};
-
 export const mainSymbols = {
 	...common,
-	...linuxMainSymbols,
+	// The main symbols for those do not look that good on Ubuntu.
+	...(
+		platform === 'linux' ?
+			{
+				circleQuestionMark: '?⃝',
+				questionMarkPrefix: '?⃝'
+			} :
+			{
+				circleQuestionMark: '?',
+				questionMarkPrefix: '?'
+			}
+	),
 	tick: '✔',
 	info: 'ℹ',
 	warning: '⚠',
@@ -222,14 +225,12 @@ export const mainSymbols = {
 	circleCircle: 'ⓞ',
 	circleCross: 'ⓧ',
 	circlePipe: 'Ⓘ',
-	circleQuestionMark: '?⃝',
 	radioOn: '◉',
 	radioOff: '◯',
 	checkboxOn: '☒',
 	checkboxOff: '☐',
 	checkboxCircleOn: 'ⓧ',
 	checkboxCircleOff: 'Ⓘ',
-	questionMarkPrefix: '?⃝',
 	pointer: '❯',
 	triangleUpOutline: '△',
 	triangleLeft: '◀',
