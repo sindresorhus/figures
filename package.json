@@ -35,7 +35,8 @@
 		"fallback"
 	],
 	"dependencies": {
-		"escape-string-regexp": "^5.0.0"
+		"escape-string-regexp": "^5.0.0",
+		"is-unicode-supported": "^1.0.0"
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
