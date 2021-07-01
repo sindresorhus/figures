@@ -302,8 +302,10 @@ const getReplacements = () => {
 	return replacements;
 };
 
+module.exports = figures;
+
 // On Windows, substitute non-fallback to fallback figures
-const replaceCharsToFallback = string => {
+module.exports.replaceSymbols = string => {
 	if (figures === main) {
 		return string;
 	}
@@ -315,6 +317,5 @@ const replaceCharsToFallback = string => {
 	return string;
 };
 
-module.exports = Object.assign(replaceCharsToFallback, figures);
 module.exports.main = main;
 module.exports.windows = fallback;
