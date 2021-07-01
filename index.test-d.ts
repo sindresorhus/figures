@@ -1,8 +1,8 @@
 import {expectType} from 'tsd';
 import figures = require('.');
-import {replaceSymbols, main, windows} from '.';
+import {replaceSymbols, mainSymbols, windowsSymbols} from '.';
 
 expectType<string>(replaceSymbols('✔︎ check'));
 expectType<string>(figures.tick);
-expectType<string>(main.tick);
-expectType<string>(windows.tick);
+expectType<string>(mainSymbols.tick);
+expectType<string>(windowsSymbols.tick);

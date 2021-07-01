@@ -1,9 +1,9 @@
 import test from 'ava';
-import figures, {replaceSymbols, main, windows} from '.';
+import figures, {replaceSymbols, mainSymbols, windowsSymbols} from '.';
 
-const result = (main, windows) => process.platform === 'win32' ? windows : main;
+const result = (mainSymbols, windowsSymbols) => process.platform === 'win32' ? windowsSymbols : mainSymbols;
 
-const NON_FIGURE_KEYS = new Set(['main', 'windows', 'replaceSymbols']);
+const NON_FIGURE_KEYS = new Set(['mainSymbols', 'windowsSymbols', 'replaceSymbols']);
 const isFigureKey = ([key]) => !NON_FIGURE_KEYS.has(key);
 const getFigure = ([, figure]) => figure;
 const getFigures = () => Object.entries(figures).filter(isFigureKey).map(getFigure);
@@ -23,8 +23,8 @@ test('fallbacks', t => {
 });
 
 test('exported sets', t => {
-	t.is(main.tick, '✔');
-	t.is(windows.tick, '√');
+	t.is(mainSymbols.tick, '✔');
+	t.is(windowsSymbols.tick, '√');
 });
 
 test('figures are non-empty strings', t => {

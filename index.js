@@ -198,7 +198,7 @@ const common = {
 	lineSlash: '╱'
 };
 
-const main = {
+const mainSymbols = {
 	...common,
 	tick: '✔',
 	info: 'ℹ',
@@ -238,7 +238,7 @@ const main = {
 	oneTenth: '⅒'
 };
 
-const fallback = {
+const windowsSymbols = {
 	...common,
 	tick: '√',
 	info: 'i',
@@ -279,16 +279,17 @@ const fallback = {
 };
 
 if (platform === 'linux') {
-	// The main one doesn't look that good on Ubuntu.
-	main.circleQuestionMark = '?';
-	main.questionMarkPrefix = '?';
+	// The main symbols for those do not look that good on Ubuntu.
+	mainSymbols.circleQuestionMark = '?';
+	mainSymbols.questionMarkPrefix = '?';
 }
 
 // TODO: Use https://github.com/sindresorhus/is-unicode-supported when targeting Node.js 10.
-const figures = platform === 'win32' ? fallback : main;
+const shouldUseWindows = platform === 'win32';
+const figures = shouldUseWindows ? windowsSymbols : mainSymbols;
 
-const isFallbackFigure = ([key, mainValue]) => figures[key] !== mainValue;
-const getFigureRegExp = ([key, mainValue]) => [new RegExp(escapeStringRegexp(mainValue), 'g'), figures[key]];
+const isWindowsSymbol = ([key, mainSymbol]) => figures[key] !== mainSymbol;
+const getFigureRegExp = ([key, mainSymbol]) => [new RegExp(escapeStringRegexp(mainSymbol), 'g'), windowsSymbols[key]];
 
 let replacements = [];
 const getReplacements = () => {
@@ -296,26 +297,26 @@ const getReplacements = () => {
 		return replacements;
 	}
 
-	replacements = Object.entries(main)
-		.filter(isFallbackFigure)
+	replacements = Object.entries(mainSymbols)
+		.filter(isWindowsSymbol)
 		.map(getFigureRegExp);
 	return replacements;
 };
 
 module.exports = figures;
 
-// On Windows, substitute non-fallback to fallback figures
+// On Windows, substitute non-Windows to Windows figures
 module.exports.replaceSymbols = string => {
-	if (figures === main) {
+	if (!shouldUseWindows) {
 		return string;
 	}
 
-	for (const [mainRegExp, fallbackValue] of getReplacements()) {
-		string = string.replace(mainRegExp, fallbackValue);
+	for (const [figureRegExp, windowsSymbol] of getReplacements()) {
+		string = string.replace(figureRegExp, windowsSymbol);
 	}
 
 	return string;
 };
 
-module.exports.main = main;
-module.exports.windows = fallback;
+module.exports.mainSymbols = mainSymbols;
+module.exports.windowsSymbols = windowsSymbols;
