@@ -13,11 +13,10 @@
 	"type": "module",
 	"exports": "./index.js",
 	"engines": {
-		"node": ">=8"
+		"node": ">=12"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd",
-		"make": "./makefile.js"
+		"test": "xo && ava && tsd"
 	},
 	"files": [
 		"index.js",
@@ -40,7 +39,6 @@
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
-		"markdown-table": "^1.1.2",
 		"tsd": "^0.17.0",
 		"xo": "^0.24.0"
 	}
