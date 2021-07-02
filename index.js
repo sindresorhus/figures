@@ -291,18 +291,18 @@ const shouldUseMain = isUnicodeSupported();
 const figures = shouldUseMain ? mainSymbols : windowsSymbols;
 export default figures;
 
-const isWindowsSymbol = ([key, mainSymbol]) => figures[key] !== mainSymbol;
-const getFigureRegExp = ([key, mainSymbol]) => [new RegExp(escapeStringRegexp(mainSymbol), 'g'), windowsSymbols[key]];
+const isWindowsSymbol = (key, mainSymbol) => figures[key] !== mainSymbol;
+const getFigureRegExp = (key, mainSymbol) => [new RegExp(escapeStringRegexp(mainSymbol), 'g'), windowsSymbols[key]];
 
 let replacements = [];
 const getReplacements = () => {
-	if (replacements.length !== 0) {
+	if (replacements.length > 0) {
 		return replacements;
 	}
 
 	replacements = Object.entries(mainSymbols)
-		.filter(isWindowsSymbol)
-		.map(getFigureRegExp);
+		.filter(([key, mainSymbol]) => isWindowsSymbol(key, mainSymbol))
+		.map(([key, mainSymbol]) => getFigureRegExp(key, mainSymbol));
 	return replacements;
 };
 
