@@ -1,5 +1,6 @@
 import test from 'ava';
-import figures, {replaceSymbols, mainSymbols, windowsSymbols} from '.';
+// eslint-disable-next-line unicorn/import-index, import/extensions
+import figures, {replaceSymbols, mainSymbols, windowsSymbols} from './index.js';
 
 const result = (mainSymbols, windowsSymbols) => process.platform === 'win32' ? windowsSymbols : mainSymbols;
 

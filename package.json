@@ -10,6 +10,8 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": "./index.js",
 	"engines": {
 		"node": ">=12"
 	},
@@ -33,11 +35,11 @@
 		"fallback"
 	],
 	"dependencies": {
-		"escape-string-regexp": "^1.0.5"
+		"escape-string-regexp": "^5.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"tsd": "^0.7.2",
+		"ava": "^3.15.0",
+		"tsd": "^0.17.0",
 		"xo": "^0.24.0"
 	}
 }
