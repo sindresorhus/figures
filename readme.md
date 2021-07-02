@@ -16,14 +16,8 @@ $ npm install figures
 
 ## Usage
 
-See the [source](index.js) for supported symbols.
-
 ```js
 import figures, {replaceSymbols, mainSymbols, windowsSymbols} from 'figures';
-
-console.log(figures.replaceSymbols('✔︎ check'));
-// On non-Windows OSes:  ✔︎ check
-// On Windows:           √ check
 
 console.log(figures.tick);
 // On non-Windows OSes:  ✔︎
@@ -34,9 +28,27 @@ console.log(figures.mainSymbols.tick);
 
 console.log(figures.windowsSymbols.tick);
 // On all OSes:  √
+
+console.log(figures.replaceSymbols('✔︎ check'));
+// On non-Windows OSes:  ✔︎ check
+// On Windows:           √ check
 ```
 
 ## API
+
+### figures (default export)
+
+Type: `object`
+
+Symbols to use on any terminal.
+
+### mainSymbols
+
+Symbols to use when not running on Windows.
+
+### windowsSymbols
+
+Symbols to use when running on Windows.
 
 ### replaceSymbols(string)
 
@@ -49,14 +61,6 @@ All the below [figures](#figures) are attached to the default export as shown in
 Type: `string`
 
 String where the Unicode symbols will be replaced with fallback symbols depending on the OS.
-
-### mainSymbols
-
-Symbols to use when not running on Windows.
-
-### windowsSymbols
-
-Symbols to use when running on Windows.
 
 
 ## Figures
