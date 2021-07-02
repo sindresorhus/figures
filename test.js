@@ -1,8 +1,9 @@
 import test from 'ava';
+import isUnicodeSupported from 'is-unicode-supported';
 // eslint-disable-next-line unicorn/import-index, import/extensions
 import figures, {replaceSymbols, mainSymbols, windowsSymbols} from './index.js';
 
-const result = (mainSymbols, windowsSymbols) => process.platform === 'win32' ? windowsSymbols : mainSymbols;
+const result = (mainSymbols, windowsSymbols) => isUnicodeSupported() ? mainSymbols : windowsSymbols;
 
 const NON_FIGURE_KEYS = new Set(['mainSymbols', 'windowsSymbols', 'replaceSymbols']);
 const isFigureKey = ([key]) => !NON_FIGURE_KEYS.has(key);

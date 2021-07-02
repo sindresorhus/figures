@@ -1,4 +1,5 @@
 import escapeStringRegexp from 'escape-string-regexp';
+import isUnicodeSupported from 'is-unicode-supported';
 
 const {platform} = process;
 
@@ -286,9 +287,8 @@ export const windowsSymbols = {
 	oneTenth: '1/10'
 };
 
-// TODO: Use https://github.com/sindresorhus/is-unicode-supported when targeting Node.js 10.
-const shouldUseWindows = platform === 'win32';
-const figures = shouldUseWindows ? windowsSymbols : mainSymbols;
+const shouldUseMain = isUnicodeSupported();
+const figures = shouldUseMain ? mainSymbols : windowsSymbols;
 export default figures;
 
 const isWindowsSymbol = ([key, mainSymbol]) => figures[key] !== mainSymbol;
@@ -308,7 +308,7 @@ const getReplacements = () => {
 
 // On Windows, substitute non-Windows to Windows figures
 export const replaceSymbols = string => {
-	if (!shouldUseWindows) {
+	if (shouldUseMain) {
 		return string;
 	}
 
