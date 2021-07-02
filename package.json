@@ -14,8 +14,7 @@
 		"node": ">=8"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd",
-		"make": "./makefile.js"
+		"test": "xo && ava && tsd"
 	},
 	"files": [
 		"index.js",
@@ -38,7 +37,6 @@
 	},
 	"devDependencies": {
 		"ava": "^1.4.1",
-		"markdown-table": "^1.1.2",
 		"tsd": "^0.7.2",
 		"xo": "^0.24.0"
 	}
