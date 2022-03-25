@@ -1,6 +1,6 @@
 {
 	"name": "figures",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "Unicode symbols with fallbacks for older terminals",
 	"license": "MIT",
 	"repository": "sindresorhus/figures",
