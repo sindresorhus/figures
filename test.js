@@ -14,8 +14,8 @@ test('replaceSymbols()', t => {
 	t.is(replaceSymbols('foo'), 'foo');
 	t.is(replaceSymbols('?bar?'), '?bar?');
 	t.is(replaceSymbols('✔ ✔ ✔'), result('✔ ✔ ✔', '√ √ √'));
-	t.is(replaceSymbols('✔ ✖\n★ ◼'), result('✔ ✖\n★ ◼', '√ ×\n✶ ■'));
-	t.is(replaceSymbols('✔ ✖ ★ ◼'), result('✔ ✖ ★ ◼', '√ × ✶ ■'));
+	t.is(replaceSymbols('✔ ✘\n★ ◼'), result('✔ ✘\n★ ◼', '√ ×\n✶ ■'));
+	t.is(replaceSymbols('✔ ✘ ★ ◼'), result('✔ ✘ ★ ◼', '√ × ✶ ■'));
 });
 
 test('mainSymbols and windowsSymbols', t => {
