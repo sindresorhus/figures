@@ -10,8 +10,8 @@ Terminals such as Windows Console Host (and CMD) only support a [limited charact
 
 ## Install
 
-```
-$ npm install figures
+```sh
+npm install figures
 ```
 
 ## Usage
@@ -61,7 +61,6 @@ All the below [figures](#figures) are attached to the default export as shown in
 Type: `string`
 
 String where the Unicode symbols will be replaced with fallback symbols depending on the terminal.
-
 
 ## Figures
 
