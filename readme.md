@@ -72,7 +72,7 @@ String where the Unicode symbols will be replaced with fallback symbols dependin
 | tick                                        | `✔`  |   `√`   |
 | info                                        | `ℹ`  |   `i`   |
 | warning                                     | `⚠`  |   `‼`   |
-| cross                                       | `✖`  |   `×`   |
+| cross                                       | `✘`  |   `×`   |
 | square                                      | `█`  |         |
 | squareSmall                                 | `◻`  |   `□`   |
 | squareSmallFilled                           | `◼`  |   `■`   |
