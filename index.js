@@ -1,5 +1,4 @@
 import process from 'node:process';
-import escapeStringRegexp from 'escape-string-regexp';
 import isUnicodeSupported from 'is-unicode-supported';
 
 const {platform} = process;
@@ -293,20 +292,8 @@ const shouldUseMain = isUnicodeSupported();
 const figures = shouldUseMain ? mainSymbols : fallbackSymbols;
 export default figures;
 
-const isFallbackSymbol = (key, mainSymbol) => fallbackSymbols[key] !== mainSymbol;
-const getFigureRegExp = (key, mainSymbol) => [new RegExp(escapeStringRegexp(mainSymbol), 'g'), fallbackSymbols[key]];
-
-let replacements = [];
-const getReplacements = () => {
-	if (replacements.length > 0) {
-		return replacements;
-	}
-
-	replacements = Object.entries(mainSymbols)
-		.filter(([key, mainSymbol]) => isFallbackSymbol(key, mainSymbol))
-		.map(([key, mainSymbol]) => getFigureRegExp(key, mainSymbol));
-	return replacements;
-};
+const replacements = Object.entries(mainSymbols)
+	.filter(([key, mainSymbol]) => fallbackSymbols[key] !== mainSymbol);
 
 // On terminals which do not support Unicode symbols, substitute them to other symbols
 export const replaceSymbols = string => {
@@ -314,8 +301,8 @@ export const replaceSymbols = string => {
 		return string;
 	}
 
-	for (const [figureRegExp, fallbackSymbol] of getReplacements()) {
-		string = string.replace(figureRegExp, fallbackSymbol);
+	for (const [key, mainSymbol] of replacements) {
+		string = string.replaceAll(mainSymbol, fallbackSymbols[key]);
 	}
 
 	return string;
