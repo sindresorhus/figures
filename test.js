@@ -10,17 +10,22 @@ test('figures', t => {
 	t.is(figures.tick, result('✔', '√'));
 });
 
-test('replaceSymbols()', t => {
+test('mainSymbols', t => {
+	t.is(mainSymbols.tick, '✔');
+});
+
+test('fallbackSymbols', t => {
+	t.is(fallbackSymbols.tick, '√');
+});
+
+test('replaceSymbols() keep non-figures as is', t => {
 	t.is(replaceSymbols('foo'), 'foo');
-	t.is(replaceSymbols('?bar?'), '?bar?');
+});
+
+test('replaceSymbols() replace figures', t => {
 	t.is(replaceSymbols('✔ ✔ ✔'), result('✔ ✔ ✔', '√ √ √'));
 	t.is(replaceSymbols('✔ ✘\n★ ◼'), result('✔ ✘\n★ ◼', '√ ×\n✶ ■'));
 	t.is(replaceSymbols('✔ ✘ ★ ◼'), result('✔ ✘ ★ ◼', '√ × ✶ ■'));
-});
-
-test('mainSymbols and windowsSymbols', t => {
-	t.is(mainSymbols.tick, '✔');
-	t.is(fallbackSymbols.tick, '√');
 });
 
 test('figures are non-empty strings', t => {
