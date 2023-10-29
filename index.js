@@ -197,8 +197,7 @@ const common = {
 	lineSlash: '╱',
 };
 
-export const mainSymbols = {
-	...common,
+const specialMainSymbols = {
 	tick: '✔',
 	info: 'ℹ',
 	warning: '⚠',
@@ -235,8 +234,7 @@ export const mainSymbols = {
 	oneTenth: '⅒',
 };
 
-export const fallbackSymbols = {
-	...common,
+const specialFallbackSymbols = {
 	tick: '√',
 	info: 'i',
 	warning: '‼',
@@ -273,12 +271,14 @@ export const fallbackSymbols = {
 	oneTenth: '1/10',
 };
 
+export const mainSymbols = {...common, ...specialMainSymbols};
+export const fallbackSymbols = {...common, ...specialFallbackSymbols};
+
 const shouldUseMain = isUnicodeSupported();
 const figures = shouldUseMain ? mainSymbols : fallbackSymbols;
 export default figures;
 
-const replacements = Object.entries(mainSymbols)
-	.filter(([key, mainSymbol]) => fallbackSymbols[key] !== mainSymbol);
+const replacements = Object.entries(specialMainSymbols);
 
 // On terminals which do not support Unicode symbols, substitute them to other symbols
 export const replaceSymbols = string => {
