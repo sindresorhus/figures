@@ -1,9 +1,8 @@
-import process from 'node:process';
 import isUnicodeSupported from 'is-unicode-supported';
 
-const {platform} = process;
-
 const common = {
+	circleQuestionMark: '(?)',
+	questionMarkPrefix: '(?)',
 	square: '█',
 	squareDarkShade: '▓',
 	squareMediumShade: '▒',
@@ -200,18 +199,6 @@ const common = {
 
 export const mainSymbols = {
 	...common,
-	// The main symbols for those do not look that good on Ubuntu.
-	...(
-		platform === 'linux'
-			? {
-				circleQuestionMark: '?⃝',
-				questionMarkPrefix: '?⃝',
-			}
-			: {
-				circleQuestionMark: '?',
-				questionMarkPrefix: '?',
-			}
-	),
 	tick: '✔',
 	info: 'ℹ',
 	warning: '⚠',
@@ -263,14 +250,12 @@ export const fallbackSymbols = {
 	circleCircle: '(○)',
 	circleCross: '(×)',
 	circlePipe: '(│)',
-	circleQuestionMark: '(?)',
 	radioOn: '(*)',
 	radioOff: '( )',
 	checkboxOn: '[×]',
 	checkboxOff: '[ ]',
 	checkboxCircleOn: '(×)',
 	checkboxCircleOff: '( )',
-	questionMarkPrefix: '？',
 	pointer: '>',
 	triangleUpOutline: '∆',
 	triangleLeft: '◄',
