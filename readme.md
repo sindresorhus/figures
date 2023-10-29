@@ -314,15 +314,3 @@ They can display most but not all of the symbols listed above.
 ## Related
 
 - [log-symbols](https://github.com/sindresorhus/log-symbols) - Colored symbols for various log levels
-
----
-
-<div align="center">
-	<b>
-		<a href="https://tidelift.com/subscription/pkg/npm-figures?utm_source=npm-figures&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
-	</b>
-	<br>
-	<sub>
-		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
-	</sub>
-</div>

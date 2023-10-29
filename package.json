@@ -11,7 +11,10 @@
 		"url": "https://sindresorhus.com"
 	},
 	"type": "module",
-	"exports": "./index.js",
+	"exports": {
+		"types": "./index.d.ts",
+		"default": "./index.js"
+	},
 	"engines": {
 		"node": ">=18"
 	},
@@ -35,7 +38,7 @@
 		"fallback"
 	],
 	"dependencies": {
-		"is-unicode-supported": "^1.2.0"
+		"is-unicode-supported": "^2.0.0"
 	},
 	"devDependencies": {
 		"ava": "^5.3.1",
