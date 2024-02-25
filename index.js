@@ -281,13 +281,11 @@ export default figures;
 const replacements = Object.entries(specialMainSymbols);
 
 // On terminals which do not support Unicode symbols, substitute them to other symbols
-export const replaceSymbols = string => {
-	if (shouldUseMain) {
-		return string;
-	}
-
-	for (const [key, mainSymbol] of replacements) {
-		string = string.replaceAll(mainSymbol, fallbackSymbols[key]);
+export const replaceSymbols = (string, {useFallback = !shouldUseMain} = {}) => {
+	if (useFallback) {
+		for (const [key, mainSymbol] of replacements) {
+			string = string.replaceAll(mainSymbol, fallbackSymbols[key]);
+		}
 	}
 
 	return string;
