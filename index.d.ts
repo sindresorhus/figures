@@ -258,7 +258,7 @@ export type Options = {
 };
 
 /**
-Returns the input with replaced fallback symbols, if the terminal has poor Unicode support.
+Returns the input with replaced fallback symbols if the terminal has poor Unicode support.
 
 @param string - String where the Unicode symbols will be replaced with fallback symbols depending on the terminal.
 @returns The input with replaced fallback Unicode symbols.
