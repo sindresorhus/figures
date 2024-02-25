@@ -32,10 +32,6 @@ console.log(fallbackSymbols.tick);
 console.log(replaceSymbols('✔ check'));
 // On terminals with Unicode symbols:  ✔ check
 // On other terminals:                 √ check
-
-console.log(replaceSymbols('✔︎ check', {useFallback: true}));
-// On terminals with Unicode symbols:  √︎ check
-// On other terminals:                 √ check
 ```
 
 ## API
@@ -78,6 +74,14 @@ Default: `true` if the terminal has poor Unicode support
 Whether to replace symbols with fallbacks.
 
 This can be set to `true` to always use fallback symbols, whether the terminal has poor Unicode support or not.
+
+```js
+import {replaceSymbols} from 'figures';
+
+console.log(replaceSymbols('✔︎ check', {useFallback: true}));
+// On terminals with Unicode symbols:  √︎ check
+// On other terminals:                 √ check
+```
 
 ## Figures
 
