@@ -17,7 +17,7 @@ npm install figures
 ## Usage
 
 ```js
-import figures, {mainSymbols, fallbackSymbols, replaceSymbols, forceFallbackSymbols} from 'figures';
+import figures, {mainSymbols, fallbackSymbols, replaceSymbols} from 'figures';
 
 console.log(figures.tick);
 // On terminals with Unicode symbols:  ✔
