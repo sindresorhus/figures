@@ -246,7 +246,7 @@ Symbols to use on any terminal.
 */
 export default figureSet;
 
-type Options = {
+export type Options = {
 	/**
 	Whether to replace symbols with fallbacks.
 
