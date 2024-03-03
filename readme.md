@@ -56,7 +56,7 @@ Symbols to use when the terminal does not support Unicode symbols.
 
 ### replaceSymbols(string, options?)
 
-Returns the input with replaced fallback symbols, if the terminal has poor Unicode support.
+Returns the input with replaced fallback symbols if the terminal has poor Unicode support.
 
 All the below [figures](#figures) are attached to the default export as shown in the example above.
 
