@@ -78,8 +78,8 @@ This can be set to `true` to always use fallback symbols, whether the terminal h
 ```js
 import {replaceSymbols} from 'figures';
 
-console.log(replaceSymbols('✔︎ check', {useFallback: true}));
-// On terminals with Unicode symbols:  √︎ check
+console.log(replaceSymbols('✔ check', {useFallback: true}));
+// On terminals with Unicode symbols:  √ check
 // On other terminals:                 √ check
 ```
 

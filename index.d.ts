@@ -271,7 +271,7 @@ console.log(replaceSymbols('✔ check'));
 // On terminals with Unicode symbols:  ✔ check
 // On other terminals:                 √ check
 
-console.log(replaceSymbols('✔︎ check', {useFallback: true}));
+console.log(replaceSymbols('✔ check', {useFallback: true}));
 // On terminals with Unicode symbols:  √ check
 // On other terminals:                 √ check
 ```
