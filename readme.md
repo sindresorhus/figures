@@ -17,7 +17,7 @@ npm install figures
 ## Usage
 
 ```js
-import figures, {replaceSymbols, mainSymbols, fallbackSymbols} from 'figures';
+import figures, {mainSymbols, fallbackSymbols, replaceSymbols} from 'figures';
 
 console.log(figures.tick);
 // On terminals with Unicode symbols:  ✔
@@ -50,9 +50,9 @@ Symbols to use when the terminal supports Unicode symbols.
 
 Symbols to use when the terminal does not support Unicode symbols.
 
-### replaceSymbols(string)
+### replaceSymbols(string, options?)
 
-Returns the input with replaced fallback Unicode symbols on older terminals.
+Returns the input with replaced fallback symbols if the terminal has poor Unicode support.
 
 All the below [figures](#figures) are attached to the default export as shown in the example above.
 
@@ -61,6 +61,27 @@ All the below [figures](#figures) are attached to the default export as shown in
 Type: `string`
 
 String where the Unicode symbols will be replaced with fallback symbols depending on the terminal.
+
+#### options
+
+Type: `object`
+
+##### useFallback
+
+Type: `boolean`\
+Default: `true` if the terminal has poor Unicode support
+
+Whether to replace symbols with fallbacks.
+
+This can be set to `true` to always use fallback symbols, whether the terminal has poor Unicode support or not.
+
+```js
+import {replaceSymbols} from 'figures';
+
+console.log(replaceSymbols('✔ check', {useFallback: true}));
+// On terminals with Unicode symbols:  √ check
+// On other terminals:                 √ check
+```
 
 ## Figures
 

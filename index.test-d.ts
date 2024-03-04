@@ -1,7 +1,19 @@
-import {expectType} from 'tsd';
-import figures, {replaceSymbols, mainSymbols, fallbackSymbols} from './index.js';
+import {expectType, expectError} from 'tsd';
+import figures, {mainSymbols, fallbackSymbols, replaceSymbols} from './index.js';
+
+expectType<string>(figures.tick);
+
+expectType<string>(mainSymbols.tick);
+
+expectType<string>(fallbackSymbols.tick);
 
 expectType<string>(replaceSymbols('✔ check'));
-expectType<string>(figures.tick);
-expectType<string>(mainSymbols.tick);
-expectType<string>(fallbackSymbols.tick);
+expectError(replaceSymbols(true));
+expectError(replaceSymbols());
+
+replaceSymbols('', {});
+replaceSymbols('', {useFallback: undefined});
+replaceSymbols('', {useFallback: true});
+expectError(replaceSymbols('', {useFallback: 'other'}));
+expectError(replaceSymbols('', {other: true}));
+expectError(replaceSymbols('', ''));
