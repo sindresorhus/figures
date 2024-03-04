@@ -256,12 +256,12 @@ Replace Unicode symbols depending on the terminal.
 ```
 import figures, {replaceSymbols} from 'figures';
 
-console.log(replaceSymbols('✔︎ check'));
-// On terminals with Unicode symbols:  ✔︎ check
+console.log(replaceSymbols('✔ check'));
+// On terminals with Unicode symbols:  ✔ check
 // On other terminals:                 √ check
 
 console.log(figures.tick);
-// On terminals with Unicode symbols:  ✔︎
+// On terminals with Unicode symbols:  ✔
 // On other terminals:                 √
 ```
 */

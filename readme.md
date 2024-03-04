@@ -20,17 +20,17 @@ npm install figures
 import figures, {replaceSymbols, mainSymbols, fallbackSymbols} from 'figures';
 
 console.log(figures.tick);
-// On terminals with Unicode symbols:  ✔︎
+// On terminals with Unicode symbols:  ✔
 // On other terminals:                 √
 
 console.log(mainSymbols.tick);
-// On all terminals:  ✔︎
+// On all terminals:  ✔
 
 console.log(fallbackSymbols.tick);
 // On all terminals:  √
 
-console.log(replaceSymbols('✔︎ check'));
-// On terminals with Unicode symbols:  ✔︎ check
+console.log(replaceSymbols('✔ check'));
+// On terminals with Unicode symbols:  ✔ check
 // On other terminals:                 √ check
 ```
 
